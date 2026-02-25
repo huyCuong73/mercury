@@ -12,8 +12,8 @@ import (
 
 	"github.com/ethereum/go-ethereum/common"
 
-	"github.com/cosmos/evm/crypto/ethsecp256k1"
-	"github.com/cosmos/evm/tests/systemtests/clients"
+	"github.com/huyCuong73/mercury/crypto/ethsecp256k1"
+	"github.com/huyCuong73/mercury/tests/systemtests/clients"
 
 	"cosmossdk.io/systemtests"
 

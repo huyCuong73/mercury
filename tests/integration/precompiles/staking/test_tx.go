@@ -9,12 +9,12 @@ import (
 	"github.com/ethereum/go-ethereum/core/vm"
 	"github.com/ethereum/go-ethereum/crypto"
 
-	cmn "github.com/cosmos/evm/precompiles/common"
-	"github.com/cosmos/evm/precompiles/staking"
-	"github.com/cosmos/evm/precompiles/testutil"
-	testkeyring "github.com/cosmos/evm/testutil/keyring"
-	cosmosevmutiltx "github.com/cosmos/evm/testutil/tx"
-	"github.com/cosmos/evm/x/vm/statedb"
+	cmn "github.com/huyCuong73/mercury/precompiles/common"
+	"github.com/huyCuong73/mercury/precompiles/staking"
+	"github.com/huyCuong73/mercury/precompiles/testutil"
+	testkeyring "github.com/huyCuong73/mercury/testutil/keyring"
+	cosmosevmutiltx "github.com/huyCuong73/mercury/testutil/tx"
+	"github.com/huyCuong73/mercury/x/vm/statedb"
 
 	"cosmossdk.io/math"
 

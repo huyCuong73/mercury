@@ -237,7 +237,7 @@ func createGenesisWithMaxGas(t *testing.T, maxGas int64) string {
 	require.NoError(t, os.MkdirAll(configDir, 0o755))
 
 	genesis := map[string]interface{}{
-		"app_name":       "evmd",
+		"app_name":       "mercuryd",
 		"app_version":    "test",
 		"chain_id":       "test-chain",
 		"initial_height": 1,
@@ -292,7 +292,7 @@ func createGenesisWithoutConsensusParams(t *testing.T) string {
 	require.NoError(t, os.MkdirAll(configDir, 0o755))
 
 	genesis := map[string]interface{}{
-		"app_name":       "evmd",
+		"app_name":       "mercuryd",
 		"app_version":    "test",
 		"chain_id":       "test-chain",
 		"initial_height": 1,

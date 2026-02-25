@@ -1,6 +1,6 @@
 package namespaces
 
-import "github.com/cosmos/evm/tests/jsonrpc/simulator/types"
+import "github.com/huyCuong73/mercury/tests/jsonrpc/simulator/types"
 
 const (
 	// Engine API namespace (not applicable for Cosmos chains)

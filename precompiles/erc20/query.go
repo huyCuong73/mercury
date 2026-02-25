@@ -9,7 +9,7 @@ import (
 	"github.com/ethereum/go-ethereum/common"
 	"github.com/ethereum/go-ethereum/core/vm"
 
-	"github.com/cosmos/evm/ibc"
+	"github.com/huyCuong73/mercury/ibc"
 
 	sdk "github.com/cosmos/cosmos-sdk/types"
 )

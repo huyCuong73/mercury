@@ -9,7 +9,7 @@ import (
 
 	"github.com/cometbft/cometbft/libs/rand"
 
-	"github.com/cosmos/evm/ethereum/eip712"
+	"github.com/huyCuong73/mercury/ethereum/eip712"
 )
 
 type FuzzTestParams struct {

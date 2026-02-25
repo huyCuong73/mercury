@@ -3,8 +3,8 @@ package feemarket
 import (
 	"reflect"
 
-	"github.com/cosmos/evm/testutil/integration/evm/network"
-	"github.com/cosmos/evm/x/feemarket/types"
+	"github.com/huyCuong73/mercury/testutil/integration/evm/network"
+	"github.com/huyCuong73/mercury/x/feemarket/types"
 )
 
 func (s *KeeperTestSuite) TestGetParams() {

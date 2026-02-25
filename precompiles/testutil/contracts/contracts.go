@@ -9,10 +9,10 @@ import (
 
 	abci "github.com/cometbft/cometbft/abci/types"
 
-	"github.com/cosmos/evm"
-	"github.com/cosmos/evm/crypto/ethsecp256k1"
-	"github.com/cosmos/evm/testutil/integration"
-	evmtypes "github.com/cosmos/evm/x/vm/types"
+	"github.com/huyCuong73/mercury"
+	"github.com/huyCuong73/mercury/crypto/ethsecp256k1"
+	"github.com/huyCuong73/mercury/testutil/integration"
+	evmtypes "github.com/huyCuong73/mercury/x/vm/types"
 
 	sdk "github.com/cosmos/cosmos-sdk/types"
 )

@@ -13,8 +13,8 @@ import (
 	"github.com/ethereum/go-ethereum/crypto"
 	"github.com/ethereum/go-ethereum/ethclient"
 
-	"github.com/cosmos/evm/tests/jsonrpc/simulator/config"
-	"github.com/cosmos/evm/tests/jsonrpc/simulator/types"
+	"github.com/huyCuong73/mercury/tests/jsonrpc/simulator/config"
+	"github.com/huyCuong73/mercury/tests/jsonrpc/simulator/types"
 )
 
 func SendTransaction(rCtx *types.RPCContext, from, to string, value *big.Int, isGeth bool) (string, error) {
@@ -153,20 +153,20 @@ func NewERC20FilterLogs(rCtx *types.RPCContext, isGeth bool) (ethereum.FilterQue
 		},
 	}
 
-	// Create filter on evmd
+	// Create filter on mercuryd
 	args, err := ToFilterArg(fErc20Transfer)
 	if err != nil {
 		return fErc20Transfer, "", fmt.Errorf("failed to create filter args: %w", err)
 	}
-	var evmdFilterID string
-	if err = ethCli.RPCClient().CallContext(rCtx, &evmdFilterID, "eth_newFilter", args); err != nil {
-		return fErc20Transfer, "", fmt.Errorf("failed to create filter on evmd: %w", err)
+	var mercurydFilterID string
+	if err = ethCli.RPCClient().CallContext(rCtx, &mercurydFilterID, "eth_newFilter", args); err != nil {
+		return fErc20Transfer, "", fmt.Errorf("failed to create filter on mercuryd: %w", err)
 	}
 
-	return fErc20Transfer, evmdFilterID, nil
+	return fErc20Transfer, mercurydFilterID, nil
 }
 
-// Standard dev account addresses (matching evmd genesis accounts)
+// Standard dev account addresses (matching mercuryd genesis accounts)
 var StandardDevAccounts = map[string]common.Address{
 	"dev0": common.HexToAddress("0xC6Fe5D33615a1C52c08018c47E8Bc53646A0E101"), // dev0 from local_node.sh
 	"dev1": common.HexToAddress("0x963EBDf2e1f8DB8707D05FC75bfeFFBa1B5BaC17"), // dev1 from local_node.sh
@@ -254,20 +254,20 @@ func DeployContract(rCtx *types.RPCContext, contractByteCode []byte, isGeth bool
 		return common.Address{}, "", nil, fmt.Errorf("failed to get dev0 credentials: %v", err)
 	}
 
-	fmt.Printf("Deploying ERC20 to evmd using dev0 (%s)...\n", fromAddress.Hex())
+	fmt.Printf("Deploying ERC20 to mercuryd using dev0 (%s)...\n", fromAddress.Hex())
 
-	evmdTxHash, err := deployContractViaDynamicFeeTx(ethCli.Client, privateKey, contractByteCode)
+	mercurydTxHash, err := deployContractViaDynamicFeeTx(ethCli.Client, privateKey, contractByteCode)
 	if err != nil {
 		return common.Address{}, "", nil, err
 	} else {
-		addr, blockNum, err = waitForContractDeployment(ethCli.Client, evmdTxHash, 30*time.Second)
+		addr, blockNum, err = waitForContractDeployment(ethCli.Client, mercurydTxHash, 30*time.Second)
 		if err != nil {
 			return common.Address{}, "", nil, err
 		}
 	}
 
-	fmt.Printf("✓ evmd deployment successful: %s\n", addr.Hex())
-	return addr, evmdTxHash, blockNum, nil
+	fmt.Printf("✓ mercuryd deployment successful: %s\n", addr.Hex())
+	return addr, mercurydTxHash, blockNum, nil
 }
 
 func deployContractViaDynamicFeeTx(client *ethclient.Client, privateKey *ecdsa.PrivateKey, contractByteCode []byte) (string, error) {
@@ -324,7 +324,7 @@ func deployContractViaDynamicFeeTx(client *ethclient.Client, privateKey *ecdsa.P
 
 // waitForContractDeployment waits for a deployment transaction to be mined and returns the contract address
 func waitForContractDeployment(client *ethclient.Client, txHashStr string, timeout time.Duration) (common.Address, *big.Int, error) {
-	fmt.Printf("Waiting for evmd deployment (tx: %s)...\n", txHashStr)
+	fmt.Printf("Waiting for mercuryd deployment (tx: %s)...\n", txHashStr)
 
 	ctx, cancel := context.WithTimeout(context.Background(), timeout)
 	defer cancel()

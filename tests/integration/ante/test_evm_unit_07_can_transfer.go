@@ -4,13 +4,13 @@ import (
 	"fmt"
 	"math/big"
 
-	"github.com/cosmos/evm/ante/evm"
-	"github.com/cosmos/evm/testutil/integration/evm/factory"
-	"github.com/cosmos/evm/testutil/integration/evm/grpc"
-	"github.com/cosmos/evm/testutil/integration/evm/network"
-	testkeyring "github.com/cosmos/evm/testutil/keyring"
-	"github.com/cosmos/evm/x/precisebank/types"
-	evmtypes "github.com/cosmos/evm/x/vm/types"
+	"github.com/huyCuong73/mercury/ante/evm"
+	"github.com/huyCuong73/mercury/testutil/integration/evm/factory"
+	"github.com/huyCuong73/mercury/testutil/integration/evm/grpc"
+	"github.com/huyCuong73/mercury/testutil/integration/evm/network"
+	testkeyring "github.com/huyCuong73/mercury/testutil/keyring"
+	"github.com/huyCuong73/mercury/x/precisebank/types"
+	evmtypes "github.com/huyCuong73/mercury/x/vm/types"
 
 	"cosmossdk.io/math"
 

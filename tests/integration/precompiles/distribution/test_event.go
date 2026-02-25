@@ -8,11 +8,11 @@ import (
 	"github.com/ethereum/go-ethereum/crypto"
 	"github.com/holiman/uint256"
 
-	cmn "github.com/cosmos/evm/precompiles/common"
-	"github.com/cosmos/evm/precompiles/distribution"
-	"github.com/cosmos/evm/precompiles/testutil"
-	"github.com/cosmos/evm/testutil/constants"
-	"github.com/cosmos/evm/x/vm/statedb"
+	cmn "github.com/huyCuong73/mercury/precompiles/common"
+	"github.com/huyCuong73/mercury/precompiles/distribution"
+	"github.com/huyCuong73/mercury/precompiles/testutil"
+	"github.com/huyCuong73/mercury/testutil/constants"
+	"github.com/huyCuong73/mercury/x/vm/statedb"
 
 	"cosmossdk.io/math"
 	storetypes "cosmossdk.io/store/types"

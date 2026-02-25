@@ -10,10 +10,10 @@ import (
 	"github.com/ethereum/go-ethereum/signer/core/apitypes"
 	"google.golang.org/grpc/metadata"
 
-	"github.com/cosmos/evm/crypto/ethsecp256k1"
-	"github.com/cosmos/evm/rpc/backend/mocks"
-	utiltx "github.com/cosmos/evm/testutil/tx"
-	evmtypes "github.com/cosmos/evm/x/vm/types"
+	"github.com/huyCuong73/mercury/crypto/ethsecp256k1"
+	"github.com/huyCuong73/mercury/rpc/backend/mocks"
+	utiltx "github.com/huyCuong73/mercury/testutil/tx"
+	evmtypes "github.com/huyCuong73/mercury/x/vm/types"
 
 	"cosmossdk.io/math"
 

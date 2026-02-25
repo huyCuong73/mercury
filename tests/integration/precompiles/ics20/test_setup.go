@@ -5,9 +5,9 @@ import (
 
 	"github.com/stretchr/testify/suite"
 
-	"github.com/cosmos/evm"
-	"github.com/cosmos/evm/precompiles/ics20"
-	evmibctesting "github.com/cosmos/evm/testutil/ibc"
+	"github.com/huyCuong73/mercury"
+	"github.com/huyCuong73/mercury/precompiles/ics20"
+	evmibctesting "github.com/huyCuong73/mercury/testutil/ibc"
 	ibctesting "github.com/cosmos/ibc-go/v10/testing"
 )
 

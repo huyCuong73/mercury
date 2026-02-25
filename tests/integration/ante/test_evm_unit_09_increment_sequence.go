@@ -1,12 +1,12 @@
 package ante
 
 import (
-	"github.com/cosmos/evm/ante/evm"
-	"github.com/cosmos/evm/mempool"
-	testconstants "github.com/cosmos/evm/testutil/constants"
-	"github.com/cosmos/evm/testutil/integration/evm/grpc"
-	"github.com/cosmos/evm/testutil/integration/evm/network"
-	testkeyring "github.com/cosmos/evm/testutil/keyring"
+	"github.com/huyCuong73/mercury/ante/evm"
+	"github.com/huyCuong73/mercury/mempool"
+	testconstants "github.com/huyCuong73/mercury/testutil/constants"
+	"github.com/huyCuong73/mercury/testutil/integration/evm/grpc"
+	"github.com/huyCuong73/mercury/testutil/integration/evm/network"
+	testkeyring "github.com/huyCuong73/mercury/testutil/keyring"
 
 	sdktypes "github.com/cosmos/cosmos-sdk/types"
 )

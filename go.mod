@@ -1,4 +1,4 @@
-module github.com/cosmos/evm
+module github.com/huyCuong73/mercury
 
 go 1.25.5
 

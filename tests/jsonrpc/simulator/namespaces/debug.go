@@ -5,7 +5,7 @@ import (
 	"fmt"
 	"strings"
 
-	"github.com/cosmos/evm/tests/jsonrpc/simulator/types"
+	"github.com/huyCuong73/mercury/tests/jsonrpc/simulator/types"
 )
 
 const (
@@ -327,7 +327,7 @@ func DebugTraceCall(rCtx *types.RPCContext) (*types.RpcResult, error) {
 	// Perform dual API comparison if enabled
 	rCtx.PerformComparison(MethodNameDebugTraceCall, txArgs, "latest", traceConfig)
 
-	// Call debug_traceCall on evmd
+	// Call debug_traceCall on mercuryd
 	var traceResult map[string]interface{}
 	err := rCtx.Evmd.RPCClient().CallContext(context.Background(), &traceResult,
 		string(MethodNameDebugTraceCall), txArgs, "latest", traceConfig)

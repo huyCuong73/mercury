@@ -8,7 +8,7 @@ import (
 	"sync"
 	"time"
 
-	"github.com/cosmos/evm/tests/systemtests/clients"
+	"github.com/huyCuong73/mercury/tests/systemtests/clients"
 )
 
 // BaseFee returns the most recently retrieved and stored baseFee.

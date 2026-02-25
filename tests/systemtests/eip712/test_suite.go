@@ -10,7 +10,7 @@ import (
 
 	sdkmath "cosmossdk.io/math"
 	sdk "github.com/cosmos/cosmos-sdk/types"
-	basesuite "github.com/cosmos/evm/tests/systemtests/suite"
+	basesuite "github.com/huyCuong73/mercury/tests/systemtests/suite"
 )
 
 type TestSuite struct {

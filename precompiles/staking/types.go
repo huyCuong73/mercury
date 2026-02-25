@@ -10,7 +10,7 @@ import (
 	"github.com/ethereum/go-ethereum/accounts/abi"
 	"github.com/ethereum/go-ethereum/common"
 
-	cmn "github.com/cosmos/evm/precompiles/common"
+	cmn "github.com/huyCuong73/mercury/precompiles/common"
 
 	"cosmossdk.io/core/address"
 	"cosmossdk.io/math"
@@ -130,7 +130,7 @@ func NewMsgCreateValidator(args []interface{}, denom string, addrCdc address.Cod
 		return nil, common.Address{}, fmt.Errorf(cmn.ErrInvalidValidator, args[3])
 	}
 
-	// use cli `evmd comet show-validator` get pubkey
+	// use cli `mercuryd comet show-validator` get pubkey
 	pubkeyBase64Str, ok := args[4].(string)
 	if !ok {
 		return nil, common.Address{}, fmt.Errorf(cmn.ErrInvalidType, "pubkey", "string", args[4])

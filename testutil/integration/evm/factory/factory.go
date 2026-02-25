@@ -11,13 +11,13 @@ import (
 
 	abcitypes "github.com/cometbft/cometbft/abci/types"
 
-	"github.com/cosmos/evm/precompiles/testutil"
-	chainutil "github.com/cosmos/evm/testutil"
-	basefactory "github.com/cosmos/evm/testutil/integration/base/factory"
-	"github.com/cosmos/evm/testutil/integration/evm/grpc"
-	"github.com/cosmos/evm/testutil/integration/evm/network"
-	"github.com/cosmos/evm/testutil/types"
-	evmtypes "github.com/cosmos/evm/x/vm/types"
+	"github.com/huyCuong73/mercury/precompiles/testutil"
+	chainutil "github.com/huyCuong73/mercury/testutil"
+	basefactory "github.com/huyCuong73/mercury/testutil/integration/base/factory"
+	"github.com/huyCuong73/mercury/testutil/integration/evm/grpc"
+	"github.com/huyCuong73/mercury/testutil/integration/evm/network"
+	"github.com/huyCuong73/mercury/testutil/types"
+	evmtypes "github.com/huyCuong73/mercury/x/vm/types"
 	"github.com/cosmos/gogoproto/proto"
 
 	errorsmod "cosmossdk.io/errors"

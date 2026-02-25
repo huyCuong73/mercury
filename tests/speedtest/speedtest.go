@@ -17,11 +17,11 @@ import (
 	sdk "github.com/cosmos/cosmos-sdk/types"
 	"github.com/cosmos/cosmos-sdk/x/auth/types"
 	banktypes "github.com/cosmos/cosmos-sdk/x/bank/types"
-	"github.com/cosmos/evm/crypto/ethsecp256k1"
-	"github.com/cosmos/evm/evmd"
-	erc20types "github.com/cosmos/evm/x/erc20/types"
-	feemarkettypes "github.com/cosmos/evm/x/feemarket/types"
-	evmtypes "github.com/cosmos/evm/x/vm/types"
+	"github.com/huyCuong73/mercury/crypto/ethsecp256k1"
+	"github.com/huyCuong73/mercury/mercuryddd"
+	erc20types "github.com/huyCuong73/mercury/x/erc20/types"
+	feemarkettypes "github.com/huyCuong73/mercury/x/feemarket/types"
+	evmtypes "github.com/huyCuong73/mercury/x/vm/types"
 	"github.com/ethereum/go-ethereum/accounts/abi/bind"
 	"github.com/ethereum/go-ethereum/common"
 	types2 "github.com/ethereum/go-ethereum/core/types"
@@ -53,7 +53,7 @@ func NewSpeedTestCommand() *cobra.Command {
 			chainID := "9001"
 			baseAppOpts := make([]func(*baseapp.BaseApp), 0)
 			baseAppOpts = append(baseAppOpts, baseapp.SetChainID(chainID))
-			evmApp := evmd.NewExampleApp(logger, db, nil, true, simtestutil.NewAppOptionsWithFlagHome(dir), baseAppOpts...)
+			evmApp := mercuryd.NewExampleApp(logger, db, nil, true, simtestutil.NewAppOptionsWithFlagHome(dir), baseAppOpts...)
 			gen := generator{
 				app:      evmApp,
 				accounts: make([]accountInfo, 0),
@@ -79,7 +79,7 @@ func NewSpeedTestCommand() *cobra.Command {
 }
 
 type generator struct {
-	app      *evmd.EVMD
+	app      *mercuryd.EVMD
 	accounts []accountInfo
 }
 

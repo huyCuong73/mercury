@@ -23,9 +23,9 @@ import (
 	"github.com/gorilla/websocket"
 	"github.com/pkg/errors"
 
-	rpcfilters "github.com/cosmos/evm/rpc/namespaces/ethereum/eth/filters"
-	"github.com/cosmos/evm/rpc/stream"
-	"github.com/cosmos/evm/server/config"
+	rpcfilters "github.com/huyCuong73/mercury/rpc/namespaces/ethereum/eth/filters"
+	"github.com/huyCuong73/mercury/rpc/stream"
+	"github.com/huyCuong73/mercury/server/config"
 
 	"cosmossdk.io/log"
 

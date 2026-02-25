@@ -6,9 +6,9 @@ import (
 
 	cmtproto "github.com/cometbft/cometbft/proto/tendermint/types"
 
-	testconstants "github.com/cosmos/evm/testutil/constants"
-	testtx "github.com/cosmos/evm/testutil/tx"
-	evmtypes "github.com/cosmos/evm/x/vm/types"
+	testconstants "github.com/huyCuong73/mercury/testutil/constants"
+	testtx "github.com/huyCuong73/mercury/testutil/tx"
+	evmtypes "github.com/huyCuong73/mercury/x/vm/types"
 
 	"cosmossdk.io/math"
 

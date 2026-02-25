@@ -1,7 +1,7 @@
 package eip712
 
 import (
-	antetypes "github.com/cosmos/evm/ante/types"
+	antetypes "github.com/huyCuong73/mercury/ante/types"
 
 	codectypes "github.com/cosmos/cosmos-sdk/codec/types"
 	sdktypes "github.com/cosmos/cosmos-sdk/types"

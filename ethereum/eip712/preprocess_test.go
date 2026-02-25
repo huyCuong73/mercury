@@ -8,12 +8,12 @@ import (
 
 	"github.com/stretchr/testify/require"
 
-	"github.com/cosmos/evm/encoding"
-	evmaddress "github.com/cosmos/evm/encoding/address"
-	"github.com/cosmos/evm/ethereum/eip712"
-	"github.com/cosmos/evm/testutil/constants"
-	utiltx "github.com/cosmos/evm/testutil/tx"
-	evmtypes "github.com/cosmos/evm/x/vm/types"
+	"github.com/huyCuong73/mercury/encoding"
+	evmaddress "github.com/huyCuong73/mercury/encoding/address"
+	"github.com/huyCuong73/mercury/ethereum/eip712"
+	"github.com/huyCuong73/mercury/testutil/constants"
+	utiltx "github.com/huyCuong73/mercury/testutil/tx"
+	evmtypes "github.com/huyCuong73/mercury/x/vm/types"
 
 	"cosmossdk.io/math"
 

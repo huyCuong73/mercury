@@ -8,9 +8,9 @@ import (
 
 	"github.com/stretchr/testify/require"
 
-	testconstants "github.com/cosmos/evm/testutil/constants"
-	"github.com/cosmos/evm/x/precisebank/types"
-	evmtypes "github.com/cosmos/evm/x/vm/types"
+	testconstants "github.com/huyCuong73/mercury/testutil/constants"
+	"github.com/huyCuong73/mercury/x/precisebank/types"
+	evmtypes "github.com/huyCuong73/mercury/x/vm/types"
 
 	sdkmath "cosmossdk.io/math"
 

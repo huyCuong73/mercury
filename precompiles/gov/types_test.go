@@ -8,8 +8,8 @@ import (
 	"github.com/ethereum/go-ethereum/common"
 	"github.com/stretchr/testify/require"
 
-	evmaddress "github.com/cosmos/evm/encoding/address"
-	cmn "github.com/cosmos/evm/precompiles/common"
+	evmaddress "github.com/huyCuong73/mercury/encoding/address"
+	cmn "github.com/huyCuong73/mercury/precompiles/common"
 
 	sdk "github.com/cosmos/cosmos-sdk/types"
 )

@@ -9,9 +9,9 @@ import (
 
 	_ "embed"
 
-	ibcutils "github.com/cosmos/evm/ibc"
-	cmn "github.com/cosmos/evm/precompiles/common"
-	erc20types "github.com/cosmos/evm/x/erc20/types"
+	ibcutils "github.com/huyCuong73/mercury/ibc"
+	cmn "github.com/huyCuong73/mercury/precompiles/common"
+	erc20types "github.com/huyCuong73/mercury/x/erc20/types"
 
 	storetypes "cosmossdk.io/store/types"
 

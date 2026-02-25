@@ -3,9 +3,9 @@ package config
 import (
 	"encoding/json"
 
-	testconstants "github.com/cosmos/evm/testutil/constants"
-	erc20types "github.com/cosmos/evm/x/erc20/types"
-	evmtypes "github.com/cosmos/evm/x/vm/types"
+	testconstants "github.com/huyCuong73/mercury/testutil/constants"
+	erc20types "github.com/huyCuong73/mercury/x/erc20/types"
+	evmtypes "github.com/huyCuong73/mercury/x/vm/types"
 )
 
 // GenesisState of the blockchain is represented here as a map of raw json

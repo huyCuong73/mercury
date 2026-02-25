@@ -6,13 +6,13 @@ import (
 	"fmt"
 	"math/big"
 
-	"github.com/cosmos/evm/tests/systemtests/clients"
+	"github.com/huyCuong73/mercury/tests/systemtests/clients"
 
 	"github.com/ethereum/go-ethereum/accounts/abi"
 	"github.com/ethereum/go-ethereum/common"
 	"github.com/ethereum/go-ethereum/crypto"
 
-	"github.com/cosmos/evm/crypto/ethsecp256k1"
+	"github.com/huyCuong73/mercury/crypto/ethsecp256k1"
 
 	cryptotypes "github.com/cosmos/cosmos-sdk/crypto/types"
 )

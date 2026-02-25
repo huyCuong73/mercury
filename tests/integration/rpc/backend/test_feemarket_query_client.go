@@ -3,8 +3,8 @@ package backend
 import (
 	"github.com/stretchr/testify/mock"
 
-	"github.com/cosmos/evm/rpc/backend/mocks"
-	feemarkettypes "github.com/cosmos/evm/x/feemarket/types"
+	"github.com/huyCuong73/mercury/rpc/backend/mocks"
+	feemarkettypes "github.com/huyCuong73/mercury/x/feemarket/types"
 
 	sdkerrors "github.com/cosmos/cosmos-sdk/types/errors"
 )

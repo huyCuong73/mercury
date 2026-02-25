@@ -8,10 +8,10 @@ import (
 	abci "github.com/cometbft/cometbft/abci/types"
 	"github.com/cometbft/cometbft/crypto/tmhash"
 
-	evmmempool "github.com/cosmos/evm/mempool"
-	"github.com/cosmos/evm/testutil/integration/base/factory"
-	"github.com/cosmos/evm/testutil/keyring"
-	evmtypes "github.com/cosmos/evm/x/vm/types"
+	evmmempool "github.com/huyCuong73/mercury/mempool"
+	"github.com/huyCuong73/mercury/testutil/integration/base/factory"
+	"github.com/huyCuong73/mercury/testutil/keyring"
+	evmtypes "github.com/huyCuong73/mercury/x/vm/types"
 
 	sdkmath "cosmossdk.io/math"
 

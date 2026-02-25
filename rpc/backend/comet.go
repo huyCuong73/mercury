@@ -11,9 +11,9 @@ import (
 
 	cmtrpctypes "github.com/cometbft/cometbft/rpc/core/types"
 
-	rpctypes "github.com/cosmos/evm/rpc/types"
-	evmtrace "github.com/cosmos/evm/trace"
-	"github.com/cosmos/evm/utils"
+	rpctypes "github.com/huyCuong73/mercury/rpc/types"
+	evmtrace "github.com/huyCuong73/mercury/trace"
+	"github.com/huyCuong73/mercury/utils"
 )
 
 // CometBlockByNumber returns a CometBFT-formatted block for a given

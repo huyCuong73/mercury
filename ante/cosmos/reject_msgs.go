@@ -1,7 +1,7 @@
 package cosmos
 
 import (
-	evmtypes "github.com/cosmos/evm/x/vm/types"
+	evmtypes "github.com/huyCuong73/mercury/x/vm/types"
 
 	errorsmod "cosmossdk.io/errors"
 

@@ -8,11 +8,11 @@ import (
 	ethtypes "github.com/ethereum/go-ethereum/core/types"
 	"github.com/stretchr/testify/require"
 
-	testconstants "github.com/cosmos/evm/testutil/constants"
-	utiltx "github.com/cosmos/evm/testutil/tx"
-	vmkeeper "github.com/cosmos/evm/x/vm/keeper"
-	"github.com/cosmos/evm/x/vm/keeper/testdata"
-	"github.com/cosmos/evm/x/vm/types"
+	testconstants "github.com/huyCuong73/mercury/testutil/constants"
+	utiltx "github.com/huyCuong73/mercury/testutil/tx"
+	vmkeeper "github.com/huyCuong73/mercury/x/vm/keeper"
+	"github.com/huyCuong73/mercury/x/vm/keeper/testdata"
+	"github.com/huyCuong73/mercury/x/vm/types"
 
 	sdkmath "cosmossdk.io/math"
 

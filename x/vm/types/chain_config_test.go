@@ -5,7 +5,7 @@ import (
 
 	"github.com/stretchr/testify/require"
 
-	"github.com/cosmos/evm/x/vm/types"
+	"github.com/huyCuong73/mercury/x/vm/types"
 
 	sdkmath "cosmossdk.io/math"
 )

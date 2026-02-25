@@ -7,12 +7,12 @@ import (
 
 	ethtypes "github.com/ethereum/go-ethereum/core/types"
 
-	evmante "github.com/cosmos/evm/ante/evm"
-	"github.com/cosmos/evm/testutil"
-	"github.com/cosmos/evm/testutil/integration/evm/network"
-	testutiltx "github.com/cosmos/evm/testutil/tx"
-	"github.com/cosmos/evm/x/vm/statedb"
-	evmtypes "github.com/cosmos/evm/x/vm/types"
+	evmante "github.com/huyCuong73/mercury/ante/evm"
+	"github.com/huyCuong73/mercury/testutil"
+	"github.com/huyCuong73/mercury/testutil/integration/evm/network"
+	testutiltx "github.com/huyCuong73/mercury/testutil/tx"
+	"github.com/huyCuong73/mercury/x/vm/statedb"
+	evmtypes "github.com/huyCuong73/mercury/x/vm/types"
 
 	sdkmath "cosmossdk.io/math"
 	storetypes "cosmossdk.io/store/types"

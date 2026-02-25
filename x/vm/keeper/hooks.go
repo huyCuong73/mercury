@@ -7,8 +7,8 @@ import (
 	"go.opentelemetry.io/otel/attribute"
 	"go.opentelemetry.io/otel/trace"
 
-	evmtrace "github.com/cosmos/evm/trace"
-	"github.com/cosmos/evm/x/vm/types"
+	evmtrace "github.com/huyCuong73/mercury/trace"
+	"github.com/huyCuong73/mercury/x/vm/types"
 
 	errorsmod "cosmossdk.io/errors"
 

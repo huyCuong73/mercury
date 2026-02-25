@@ -6,9 +6,9 @@ import (
 	ethtypes "github.com/ethereum/go-ethereum/core/types"
 	"github.com/holiman/uint256"
 
-	"github.com/cosmos/evm/mempool/miner"
-	"github.com/cosmos/evm/mempool/txpool"
-	msgtypes "github.com/cosmos/evm/x/vm/types"
+	"github.com/huyCuong73/mercury/mempool/miner"
+	"github.com/huyCuong73/mercury/mempool/txpool"
+	msgtypes "github.com/huyCuong73/mercury/x/vm/types"
 
 	"cosmossdk.io/log"
 	"cosmossdk.io/math"

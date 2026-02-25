@@ -9,9 +9,9 @@ import (
 	ethtypes "github.com/ethereum/go-ethereum/core/types"
 	"github.com/stretchr/testify/require"
 
-	"github.com/cosmos/evm/encoding"
-	utiltx "github.com/cosmos/evm/testutil/tx"
-	evmtypes "github.com/cosmos/evm/x/vm/types"
+	"github.com/huyCuong73/mercury/encoding"
+	utiltx "github.com/huyCuong73/mercury/testutil/tx"
+	evmtypes "github.com/huyCuong73/mercury/x/vm/types"
 	proto "github.com/cosmos/gogoproto/proto"
 
 	"github.com/cosmos/cosmos-sdk/client"

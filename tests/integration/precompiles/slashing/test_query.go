@@ -5,9 +5,9 @@ import (
 
 	"github.com/ethereum/go-ethereum/common"
 
-	cmn "github.com/cosmos/evm/precompiles/common"
-	"github.com/cosmos/evm/precompiles/slashing"
-	"github.com/cosmos/evm/precompiles/testutil"
+	cmn "github.com/huyCuong73/mercury/precompiles/common"
+	"github.com/huyCuong73/mercury/precompiles/slashing"
+	"github.com/huyCuong73/mercury/precompiles/testutil"
 
 	"github.com/cosmos/cosmos-sdk/types"
 	"github.com/cosmos/cosmos-sdk/types/query"

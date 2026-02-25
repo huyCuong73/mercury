@@ -5,9 +5,9 @@ import (
 
 	"github.com/ethereum/go-ethereum/common"
 
-	"github.com/cosmos/evm/precompiles/bank"
-	"github.com/cosmos/evm/testutil/integration/evm/network"
-	cosmosevmutiltx "github.com/cosmos/evm/testutil/tx"
+	"github.com/huyCuong73/mercury/precompiles/bank"
+	"github.com/huyCuong73/mercury/testutil/integration/evm/network"
+	cosmosevmutiltx "github.com/huyCuong73/mercury/testutil/tx"
 
 	"cosmossdk.io/math"
 

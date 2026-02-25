@@ -1,11 +1,11 @@
 package utils
 
 import (
-	testconstants "github.com/cosmos/evm/testutil/constants"
-	"github.com/cosmos/evm/testutil/integration/evm/network"
-	testkeyring "github.com/cosmos/evm/testutil/keyring"
-	utiltx "github.com/cosmos/evm/testutil/tx"
-	erc20types "github.com/cosmos/evm/x/erc20/types"
+	testconstants "github.com/huyCuong73/mercury/testutil/constants"
+	"github.com/huyCuong73/mercury/testutil/integration/evm/network"
+	testkeyring "github.com/huyCuong73/mercury/testutil/keyring"
+	utiltx "github.com/huyCuong73/mercury/testutil/tx"
+	erc20types "github.com/huyCuong73/mercury/x/erc20/types"
 
 	codectypes "github.com/cosmos/cosmos-sdk/codec/types"
 	authtypes "github.com/cosmos/cosmos-sdk/x/auth/types"

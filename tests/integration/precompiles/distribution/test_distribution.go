@@ -9,12 +9,12 @@ import (
 	"github.com/ethereum/go-ethereum/core/vm"
 	"github.com/holiman/uint256"
 
-	cmn "github.com/cosmos/evm/precompiles/common"
-	"github.com/cosmos/evm/precompiles/distribution"
-	"github.com/cosmos/evm/precompiles/testutil"
-	chainutil "github.com/cosmos/evm/testutil"
-	"github.com/cosmos/evm/testutil/constants"
-	evmtypes "github.com/cosmos/evm/x/vm/types"
+	cmn "github.com/huyCuong73/mercury/precompiles/common"
+	"github.com/huyCuong73/mercury/precompiles/distribution"
+	"github.com/huyCuong73/mercury/precompiles/testutil"
+	chainutil "github.com/huyCuong73/mercury/testutil"
+	"github.com/huyCuong73/mercury/testutil/constants"
+	evmtypes "github.com/huyCuong73/mercury/x/vm/types"
 
 	"cosmossdk.io/math"
 

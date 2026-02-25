@@ -8,10 +8,10 @@ import (
 	"github.com/ethereum/go-ethereum/crypto/secp256k1"
 	"github.com/ethereum/go-ethereum/signer/core/apitypes"
 
-	anteinterfaces "github.com/cosmos/evm/ante/interfaces"
-	"github.com/cosmos/evm/crypto/ethsecp256k1"
-	"github.com/cosmos/evm/ethereum/eip712"
-	evmtypes "github.com/cosmos/evm/x/vm/types"
+	anteinterfaces "github.com/huyCuong73/mercury/ante/interfaces"
+	"github.com/huyCuong73/mercury/crypto/ethsecp256k1"
+	"github.com/huyCuong73/mercury/ethereum/eip712"
+	evmtypes "github.com/huyCuong73/mercury/x/vm/types"
 
 	txv1beta1 "cosmossdk.io/api/cosmos/tx/v1beta1"
 	errorsmod "cosmossdk.io/errors"

@@ -3,8 +3,8 @@ package keeper
 import (
 	"math"
 
-	"github.com/cosmos/evm/x/feemarket/types"
-	evmtypes "github.com/cosmos/evm/x/vm/types"
+	"github.com/huyCuong73/mercury/x/feemarket/types"
+	evmtypes "github.com/huyCuong73/mercury/x/vm/types"
 
 	sdkmath "cosmossdk.io/math"
 

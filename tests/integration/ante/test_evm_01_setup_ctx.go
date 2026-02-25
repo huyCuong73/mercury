@@ -3,10 +3,10 @@ package ante
 import (
 	"math/big"
 
-	evmante "github.com/cosmos/evm/ante/evm"
-	"github.com/cosmos/evm/testutil"
-	testutiltx "github.com/cosmos/evm/testutil/tx"
-	evmtypes "github.com/cosmos/evm/x/vm/types"
+	evmante "github.com/huyCuong73/mercury/ante/evm"
+	"github.com/huyCuong73/mercury/testutil"
+	testutiltx "github.com/huyCuong73/mercury/testutil/tx"
+	evmtypes "github.com/huyCuong73/mercury/x/vm/types"
 
 	storetypes "cosmossdk.io/store/types"
 

@@ -6,8 +6,8 @@ import (
 
 	ethtypes "github.com/ethereum/go-ethereum/core/types"
 
-	anteinterfaces "github.com/cosmos/evm/ante/interfaces"
-	evmtypes "github.com/cosmos/evm/x/vm/types"
+	anteinterfaces "github.com/huyCuong73/mercury/ante/interfaces"
+	evmtypes "github.com/huyCuong73/mercury/x/vm/types"
 
 	errorsmod "cosmossdk.io/errors"
 	sdkmath "cosmossdk.io/math"

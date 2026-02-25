@@ -9,7 +9,7 @@ import (
 	"go.opentelemetry.io/otel/attribute"
 	"go.opentelemetry.io/otel/trace"
 
-	evmtrace "github.com/cosmos/evm/trace"
+	evmtrace "github.com/huyCuong73/mercury/trace"
 )
 
 // GetLogs returns all the logs from all the ethereum transactions in a block.

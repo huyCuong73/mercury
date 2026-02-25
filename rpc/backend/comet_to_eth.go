@@ -16,9 +16,9 @@ import (
 
 	cmtrpctypes "github.com/cometbft/cometbft/rpc/core/types"
 
-	rpctypes "github.com/cosmos/evm/rpc/types"
-	evmtrace "github.com/cosmos/evm/trace"
-	evmtypes "github.com/cosmos/evm/x/vm/types"
+	rpctypes "github.com/huyCuong73/mercury/rpc/types"
+	evmtrace "github.com/huyCuong73/mercury/trace"
+	evmtypes "github.com/huyCuong73/mercury/x/vm/types"
 
 	sdk "github.com/cosmos/cosmos-sdk/types"
 )

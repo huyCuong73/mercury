@@ -5,9 +5,9 @@
 package network
 
 import (
-	testconstants "github.com/cosmos/evm/testutil/constants"
-	erc20types "github.com/cosmos/evm/x/erc20/types"
-	evmtypes "github.com/cosmos/evm/x/vm/types"
+	testconstants "github.com/huyCuong73/mercury/testutil/constants"
+	erc20types "github.com/huyCuong73/mercury/x/erc20/types"
+	evmtypes "github.com/huyCuong73/mercury/x/vm/types"
 
 	banktypes "github.com/cosmos/cosmos-sdk/x/bank/types"
 )

@@ -16,9 +16,9 @@ import (
 	"go.opentelemetry.io/otel/attribute"
 	"go.opentelemetry.io/otel/trace"
 
-	"github.com/cosmos/evm/mempool"
-	evmtrace "github.com/cosmos/evm/trace"
-	evmtypes "github.com/cosmos/evm/x/vm/types"
+	"github.com/huyCuong73/mercury/mempool"
+	evmtrace "github.com/huyCuong73/mercury/trace"
+	evmtypes "github.com/huyCuong73/mercury/x/vm/types"
 
 	errorsmod "cosmossdk.io/errors"
 

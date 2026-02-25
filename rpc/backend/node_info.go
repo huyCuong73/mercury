@@ -12,12 +12,12 @@ import (
 
 	cmttypes "github.com/cometbft/cometbft/types"
 
-	"github.com/cosmos/evm/crypto/ethsecp256k1"
-	rpctypes "github.com/cosmos/evm/rpc/types"
-	"github.com/cosmos/evm/server/config"
-	"github.com/cosmos/evm/testutil/constants"
-	evmtrace "github.com/cosmos/evm/trace"
-	evmtypes "github.com/cosmos/evm/x/vm/types"
+	"github.com/huyCuong73/mercury/crypto/ethsecp256k1"
+	rpctypes "github.com/huyCuong73/mercury/rpc/types"
+	"github.com/huyCuong73/mercury/server/config"
+	"github.com/huyCuong73/mercury/testutil/constants"
+	evmtrace "github.com/huyCuong73/mercury/trace"
+	evmtypes "github.com/huyCuong73/mercury/x/vm/types"
 
 	errorsmod "cosmossdk.io/errors"
 	sdkmath "cosmossdk.io/math"

@@ -16,11 +16,11 @@ import (
 	"google.golang.org/grpc/metadata"
 	"google.golang.org/grpc/status"
 
-	"github.com/cosmos/evm/rpc/backend/mocks"
-	rpc "github.com/cosmos/evm/rpc/types"
-	"github.com/cosmos/evm/testutil/constants"
-	utiltx "github.com/cosmos/evm/testutil/tx"
-	evmtypes "github.com/cosmos/evm/x/vm/types"
+	"github.com/huyCuong73/mercury/rpc/backend/mocks"
+	rpc "github.com/huyCuong73/mercury/rpc/types"
+	"github.com/huyCuong73/mercury/testutil/constants"
+	utiltx "github.com/huyCuong73/mercury/testutil/tx"
+	evmtypes "github.com/huyCuong73/mercury/x/vm/types"
 	proto "github.com/cosmos/gogoproto/proto"
 
 	"cosmossdk.io/math"

@@ -1,8 +1,8 @@
 package testutil
 
 import (
-	anteinterfaces "github.com/cosmos/evm/ante/interfaces"
-	"github.com/cosmos/evm/x/vm/statedb"
+	anteinterfaces "github.com/huyCuong73/mercury/ante/interfaces"
+	"github.com/huyCuong73/mercury/x/vm/statedb"
 
 	sdk "github.com/cosmos/cosmos-sdk/types"
 )

@@ -3,12 +3,12 @@ package slashing
 import (
 	"github.com/stretchr/testify/suite"
 
-	evmaddress "github.com/cosmos/evm/encoding/address"
-	"github.com/cosmos/evm/precompiles/slashing"
-	"github.com/cosmos/evm/testutil/integration/evm/factory"
-	"github.com/cosmos/evm/testutil/integration/evm/grpc"
-	"github.com/cosmos/evm/testutil/integration/evm/network"
-	testkeyring "github.com/cosmos/evm/testutil/keyring"
+	evmaddress "github.com/huyCuong73/mercury/encoding/address"
+	"github.com/huyCuong73/mercury/precompiles/slashing"
+	"github.com/huyCuong73/mercury/testutil/integration/evm/factory"
+	"github.com/huyCuong73/mercury/testutil/integration/evm/grpc"
+	"github.com/huyCuong73/mercury/testutil/integration/evm/network"
+	testkeyring "github.com/huyCuong73/mercury/testutil/keyring"
 
 	sdk "github.com/cosmos/cosmos-sdk/types"
 	slashingkeeper "github.com/cosmos/cosmos-sdk/x/slashing/keeper"

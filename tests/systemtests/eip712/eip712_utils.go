@@ -15,8 +15,8 @@ import (
 	xauthsigning "github.com/cosmos/cosmos-sdk/x/auth/signing"
 	banktypes "github.com/cosmos/cosmos-sdk/x/bank/types"
 
-	"github.com/cosmos/evm/ethereum/eip712"
-	"github.com/cosmos/evm/tests/systemtests/clients"
+	"github.com/huyCuong73/mercury/ethereum/eip712"
+	"github.com/huyCuong73/mercury/tests/systemtests/clients"
 )
 
 // BankSendWithEIP712 sends a bank send transaction using EIP-712 signing.

@@ -7,11 +7,11 @@ import (
 
 	"github.com/stretchr/testify/suite"
 
-	"github.com/cosmos/evm/testutil/constants"
-	"github.com/cosmos/evm/testutil/integration/evm/network"
-	"github.com/cosmos/evm/wallets/ledger"
-	"github.com/cosmos/evm/wallets/ledger/mocks"
-	"github.com/cosmos/evm/wallets/usbwallet"
+	"github.com/huyCuong73/mercury/testutil/constants"
+	"github.com/huyCuong73/mercury/testutil/integration/evm/network"
+	"github.com/huyCuong73/mercury/wallets/ledger"
+	"github.com/huyCuong73/mercury/wallets/ledger/mocks"
+	"github.com/huyCuong73/mercury/wallets/usbwallet"
 
 	"cosmossdk.io/math"
 

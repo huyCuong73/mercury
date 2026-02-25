@@ -9,13 +9,13 @@ import (
 	"github.com/stretchr/testify/mock"
 	"go.uber.org/mock/gomock"
 
-	"github.com/cosmos/evm/testutil/integration/base/factory"
-	"github.com/cosmos/evm/testutil/integration/evm/utils"
-	"github.com/cosmos/evm/x/erc20/keeper"
-	"github.com/cosmos/evm/x/erc20/types"
-	erc20mocks "github.com/cosmos/evm/x/erc20/types/mocks"
-	"github.com/cosmos/evm/x/vm/statedb"
-	evmtypes "github.com/cosmos/evm/x/vm/types"
+	"github.com/huyCuong73/mercury/testutil/integration/base/factory"
+	"github.com/huyCuong73/mercury/testutil/integration/evm/utils"
+	"github.com/huyCuong73/mercury/x/erc20/keeper"
+	"github.com/huyCuong73/mercury/x/erc20/types"
+	erc20mocks "github.com/huyCuong73/mercury/x/erc20/types/mocks"
+	"github.com/huyCuong73/mercury/x/vm/statedb"
+	evmtypes "github.com/huyCuong73/mercury/x/vm/types"
 
 	"cosmossdk.io/math"
 

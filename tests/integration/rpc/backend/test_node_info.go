@@ -11,11 +11,11 @@ import (
 
 	cmtrpcclient "github.com/cometbft/cometbft/rpc/client"
 
-	"github.com/cosmos/evm/crypto/ethsecp256k1"
-	"github.com/cosmos/evm/rpc/backend/mocks"
-	"github.com/cosmos/evm/server/config"
-	"github.com/cosmos/evm/testutil/constants"
-	evmtypes "github.com/cosmos/evm/x/vm/types"
+	"github.com/huyCuong73/mercury/crypto/ethsecp256k1"
+	"github.com/huyCuong73/mercury/rpc/backend/mocks"
+	"github.com/huyCuong73/mercury/server/config"
+	"github.com/huyCuong73/mercury/testutil/constants"
+	evmtypes "github.com/huyCuong73/mercury/x/vm/types"
 
 	"cosmossdk.io/math"
 

@@ -3,9 +3,9 @@ package network
 import (
 	"math/big"
 
-	testconstants "github.com/cosmos/evm/testutil/constants"
-	"github.com/cosmos/evm/utils"
-	evmtypes "github.com/cosmos/evm/x/vm/types"
+	testconstants "github.com/huyCuong73/mercury/testutil/constants"
+	"github.com/huyCuong73/mercury/utils"
+	evmtypes "github.com/huyCuong73/mercury/x/vm/types"
 
 	"cosmossdk.io/math"
 

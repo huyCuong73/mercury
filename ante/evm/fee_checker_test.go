@@ -8,12 +8,12 @@ import (
 
 	tmproto "github.com/cometbft/cometbft/proto/tendermint/types"
 
-	"github.com/cosmos/evm/ante/evm"
-	"github.com/cosmos/evm/ante/types"
-	"github.com/cosmos/evm/encoding"
-	testconstants "github.com/cosmos/evm/testutil/constants"
-	feemarkettypes "github.com/cosmos/evm/x/feemarket/types"
-	evmtypes "github.com/cosmos/evm/x/vm/types"
+	"github.com/huyCuong73/mercury/ante/evm"
+	"github.com/huyCuong73/mercury/ante/types"
+	"github.com/huyCuong73/mercury/encoding"
+	testconstants "github.com/huyCuong73/mercury/testutil/constants"
+	feemarkettypes "github.com/huyCuong73/mercury/x/feemarket/types"
+	evmtypes "github.com/huyCuong73/mercury/x/vm/types"
 
 	"cosmossdk.io/log"
 	"cosmossdk.io/math"

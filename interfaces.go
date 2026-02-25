@@ -3,12 +3,12 @@ package evm
 import (
 	"encoding/json"
 
-	erc20keeper "github.com/cosmos/evm/x/erc20/keeper"
-	feemarketkeeper "github.com/cosmos/evm/x/feemarket/keeper"
-	"github.com/cosmos/evm/x/ibc/callbacks/keeper"
-	transferkeeper "github.com/cosmos/evm/x/ibc/transfer/keeper"
-	precisebankkeeper "github.com/cosmos/evm/x/precisebank/keeper"
-	evmkeeper "github.com/cosmos/evm/x/vm/keeper"
+	erc20keeper "github.com/huyCuong73/mercury/x/erc20/keeper"
+	feemarketkeeper "github.com/huyCuong73/mercury/x/feemarket/keeper"
+	"github.com/huyCuong73/mercury/x/ibc/callbacks/keeper"
+	transferkeeper "github.com/huyCuong73/mercury/x/ibc/transfer/keeper"
+	precisebankkeeper "github.com/huyCuong73/mercury/x/precisebank/keeper"
+	evmkeeper "github.com/huyCuong73/mercury/x/vm/keeper"
 	ibckeeper "github.com/cosmos/ibc-go/v10/modules/core/keeper"
 	ibctesting "github.com/cosmos/ibc-go/v10/testing"
 
@@ -83,7 +83,7 @@ type EvmApp interface { //nolint:revive
 }
 
 // Keeper provider interfaces allow tests to depend on the exact subset of
-// keepers they need without requiring a fully fledged evmd application.
+// keepers they need without requiring a fully fledged mercuryd application.
 type (
 	AccountKeeperProvider interface {
 		GetAccountKeeper() authkeeper.AccountKeeper

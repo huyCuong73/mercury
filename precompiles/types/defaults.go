@@ -4,11 +4,11 @@ import (
 	"github.com/ethereum/go-ethereum/common"
 	"github.com/ethereum/go-ethereum/core/vm"
 
-	evmaddress "github.com/cosmos/evm/encoding/address"
-	ibcutils "github.com/cosmos/evm/ibc"
-	cmn "github.com/cosmos/evm/precompiles/common"
-	erc20Keeper "github.com/cosmos/evm/x/erc20/keeper"
-	transferkeeper "github.com/cosmos/evm/x/ibc/transfer/keeper"
+	evmaddress "github.com/huyCuong73/mercury/encoding/address"
+	ibcutils "github.com/huyCuong73/mercury/ibc"
+	cmn "github.com/huyCuong73/mercury/precompiles/common"
+	erc20Keeper "github.com/huyCuong73/mercury/x/erc20/keeper"
+	transferkeeper "github.com/huyCuong73/mercury/x/ibc/transfer/keeper"
 	channelkeeper "github.com/cosmos/ibc-go/v10/modules/core/04-channel/keeper"
 
 	"cosmossdk.io/core/address"

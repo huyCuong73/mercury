@@ -15,12 +15,12 @@ import (
 	cmttypes "github.com/cometbft/cometbft/types"
 	"github.com/cometbft/cometbft/version"
 
-	"github.com/cosmos/evm"
-	"github.com/cosmos/evm/testutil/integration"
-	basenetwork "github.com/cosmos/evm/testutil/integration/base/network"
-	erc20types "github.com/cosmos/evm/x/erc20/types"
-	feemarkettypes "github.com/cosmos/evm/x/feemarket/types"
-	evmtypes "github.com/cosmos/evm/x/vm/types"
+	"github.com/huyCuong73/mercury"
+	"github.com/huyCuong73/mercury/testutil/integration"
+	basenetwork "github.com/huyCuong73/mercury/testutil/integration/base/network"
+	erc20types "github.com/huyCuong73/mercury/x/erc20/types"
+	feemarkettypes "github.com/huyCuong73/mercury/x/feemarket/types"
+	evmtypes "github.com/huyCuong73/mercury/x/vm/types"
 
 	sdkmath "cosmossdk.io/math"
 	storetypes "cosmossdk.io/store/types"

@@ -15,12 +15,12 @@ import (
 	"go.opentelemetry.io/otel/attribute"
 	"go.opentelemetry.io/otel/trace"
 
-	evmmempool "github.com/cosmos/evm/mempool"
-	evmtrace "github.com/cosmos/evm/trace"
-	"github.com/cosmos/evm/utils"
-	"github.com/cosmos/evm/x/vm/statedb"
-	"github.com/cosmos/evm/x/vm/types"
-	"github.com/cosmos/evm/x/vm/wrappers"
+	evmmempool "github.com/huyCuong73/mercury/mempool"
+	evmtrace "github.com/huyCuong73/mercury/trace"
+	"github.com/huyCuong73/mercury/utils"
+	"github.com/huyCuong73/mercury/x/vm/statedb"
+	"github.com/huyCuong73/mercury/x/vm/types"
+	"github.com/huyCuong73/mercury/x/vm/wrappers"
 
 	errorsmod "cosmossdk.io/errors"
 	"cosmossdk.io/log"

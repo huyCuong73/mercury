@@ -6,12 +6,12 @@ import (
 	"testing"
 	"time"
 
-	"github.com/cosmos/evm/mempool/txpool"
-	"github.com/cosmos/evm/mempool/txpool/legacypool"
-	legacypool_mocks "github.com/cosmos/evm/mempool/txpool/legacypool/mocks"
-	statedb_mocks "github.com/cosmos/evm/x/vm/statedb/mocks"
+	"github.com/huyCuong73/mercury/mempool/txpool"
+	"github.com/huyCuong73/mercury/mempool/txpool/legacypool"
+	legacypool_mocks "github.com/huyCuong73/mercury/mempool/txpool/legacypool/mocks"
+	statedb_mocks "github.com/huyCuong73/mercury/x/vm/statedb/mocks"
 
-	"github.com/cosmos/evm/mempool/txpool/mocks"
+	"github.com/huyCuong73/mercury/mempool/txpool/mocks"
 	"github.com/ethereum/go-ethereum/common"
 	"github.com/ethereum/go-ethereum/core"
 	"github.com/ethereum/go-ethereum/core/types"

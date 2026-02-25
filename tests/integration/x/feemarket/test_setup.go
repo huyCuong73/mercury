@@ -3,10 +3,10 @@ package feemarket
 import (
 	"github.com/stretchr/testify/suite"
 
-	"github.com/cosmos/evm/testutil/integration/evm/factory"
-	"github.com/cosmos/evm/testutil/integration/evm/grpc"
-	"github.com/cosmos/evm/testutil/integration/evm/network"
-	testkeyring "github.com/cosmos/evm/testutil/keyring"
+	"github.com/huyCuong73/mercury/testutil/integration/evm/factory"
+	"github.com/huyCuong73/mercury/testutil/integration/evm/grpc"
+	"github.com/huyCuong73/mercury/testutil/integration/evm/network"
+	testkeyring "github.com/huyCuong73/mercury/testutil/keyring"
 
 	"github.com/cosmos/cosmos-sdk/baseapp"
 )

@@ -19,11 +19,11 @@ import (
 	tmrpcclient "github.com/cometbft/cometbft/rpc/client"
 	tmrpctypes "github.com/cometbft/cometbft/rpc/core/types"
 
-	evmmempool "github.com/cosmos/evm/mempool"
-	"github.com/cosmos/evm/rpc/types"
-	"github.com/cosmos/evm/server/config"
-	servertypes "github.com/cosmos/evm/server/types"
-	evmtypes "github.com/cosmos/evm/x/vm/types"
+	evmmempool "github.com/huyCuong73/mercury/mempool"
+	"github.com/huyCuong73/mercury/rpc/types"
+	"github.com/huyCuong73/mercury/server/config"
+	servertypes "github.com/huyCuong73/mercury/server/types"
+	evmtypes "github.com/huyCuong73/mercury/x/vm/types"
 
 	"cosmossdk.io/log"
 

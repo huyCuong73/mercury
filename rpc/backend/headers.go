@@ -9,8 +9,8 @@ import (
 	"go.opentelemetry.io/otel/attribute"
 	"go.opentelemetry.io/otel/trace"
 
-	rpctypes "github.com/cosmos/evm/rpc/types"
-	evmtrace "github.com/cosmos/evm/trace"
+	rpctypes "github.com/huyCuong73/mercury/rpc/types"
+	evmtrace "github.com/huyCuong73/mercury/trace"
 )
 
 // GetBlockByNumber returns the JSON-RPC compatible Ethereum block identified by

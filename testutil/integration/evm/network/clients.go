@@ -1,11 +1,11 @@
 package network
 
 import (
-	erc20types "github.com/cosmos/evm/x/erc20/types"
-	feemarkettypes "github.com/cosmos/evm/x/feemarket/types"
-	precisebankkeeper "github.com/cosmos/evm/x/precisebank/keeper"
-	precisebanktypes "github.com/cosmos/evm/x/precisebank/types"
-	evmtypes "github.com/cosmos/evm/x/vm/types"
+	erc20types "github.com/huyCuong73/mercury/x/erc20/types"
+	feemarkettypes "github.com/huyCuong73/mercury/x/feemarket/types"
+	precisebankkeeper "github.com/huyCuong73/mercury/x/precisebank/keeper"
+	precisebanktypes "github.com/huyCuong73/mercury/x/precisebank/types"
+	evmtypes "github.com/huyCuong73/mercury/x/vm/types"
 
 	"github.com/cosmos/cosmos-sdk/baseapp"
 	sdktypes "github.com/cosmos/cosmos-sdk/types"

@@ -9,13 +9,13 @@ import (
 	"github.com/ethereum/go-ethereum/crypto"
 	"github.com/holiman/uint256"
 
-	"github.com/cosmos/evm/contracts"
-	"github.com/cosmos/evm/crypto/ethsecp256k1"
-	"github.com/cosmos/evm/testutil/integration/evm/network"
-	testutiltypes "github.com/cosmos/evm/testutil/types"
-	"github.com/cosmos/evm/x/vm"
-	"github.com/cosmos/evm/x/vm/statedb"
-	"github.com/cosmos/evm/x/vm/types"
+	"github.com/huyCuong73/mercury/contracts"
+	"github.com/huyCuong73/mercury/crypto/ethsecp256k1"
+	"github.com/huyCuong73/mercury/testutil/integration/evm/network"
+	testutiltypes "github.com/huyCuong73/mercury/testutil/types"
+	"github.com/huyCuong73/mercury/x/vm"
+	"github.com/huyCuong73/mercury/x/vm/statedb"
+	"github.com/huyCuong73/mercury/x/vm/types"
 
 	sdk "github.com/cosmos/cosmos-sdk/types"
 )

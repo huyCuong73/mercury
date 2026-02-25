@@ -13,9 +13,9 @@ import (
 	coretypes "github.com/cometbft/cometbft/rpc/core/types"
 	cmttypes "github.com/cometbft/cometbft/types"
 
-	"github.com/cosmos/evm/rpc/types"
-	"github.com/cosmos/evm/utils"
-	evmtypes "github.com/cosmos/evm/x/vm/types"
+	"github.com/huyCuong73/mercury/rpc/types"
+	"github.com/huyCuong73/mercury/utils"
+	evmtypes "github.com/huyCuong73/mercury/x/vm/types"
 
 	"cosmossdk.io/log"
 

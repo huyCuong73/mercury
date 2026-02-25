@@ -8,10 +8,10 @@ import (
 	ethtypes "github.com/ethereum/go-ethereum/core/types"
 	protov2 "google.golang.org/protobuf/proto"
 
-	"github.com/cosmos/evm/ante/evm"
-	testconstants "github.com/cosmos/evm/testutil/constants"
-	testkeyring "github.com/cosmos/evm/testutil/keyring"
-	evmtypes "github.com/cosmos/evm/x/vm/types"
+	"github.com/huyCuong73/mercury/ante/evm"
+	testconstants "github.com/huyCuong73/mercury/testutil/constants"
+	testkeyring "github.com/huyCuong73/mercury/testutil/keyring"
+	evmtypes "github.com/huyCuong73/mercury/x/vm/types"
 
 	"cosmossdk.io/math"
 

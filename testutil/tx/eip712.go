@@ -6,9 +6,9 @@ import (
 	"github.com/ethereum/go-ethereum/crypto"
 	"github.com/ethereum/go-ethereum/signer/core/apitypes"
 
-	"github.com/cosmos/evm"
-	cryptocodec "github.com/cosmos/evm/crypto/codec"
-	"github.com/cosmos/evm/ethereum/eip712"
+	"github.com/huyCuong73/mercury"
+	cryptocodec "github.com/huyCuong73/mercury/crypto/codec"
+	"github.com/huyCuong73/mercury/ethereum/eip712"
 
 	"github.com/cosmos/cosmos-sdk/client"
 	"github.com/cosmos/cosmos-sdk/codec"

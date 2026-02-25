@@ -1,8 +1,8 @@
 package codec
 
 import (
-	cryptocodec "github.com/cosmos/evm/crypto/codec"
-	"github.com/cosmos/evm/ethereum/eip712"
+	cryptocodec "github.com/huyCuong73/mercury/crypto/codec"
+	"github.com/huyCuong73/mercury/ethereum/eip712"
 
 	"github.com/cosmos/cosmos-sdk/codec"
 	codectypes "github.com/cosmos/cosmos-sdk/codec/types"

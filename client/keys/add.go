@@ -13,8 +13,8 @@ import (
 
 	"github.com/spf13/cobra"
 
-	cryptohd "github.com/cosmos/evm/crypto/hd"
-	evmkeyring "github.com/cosmos/evm/crypto/keyring"
+	cryptohd "github.com/huyCuong73/mercury/crypto/hd"
+	evmkeyring "github.com/huyCuong73/mercury/crypto/keyring"
 	bip39 "github.com/cosmos/go-bip39"
 	ledger "github.com/cosmos/ledger-cosmos-go"
 

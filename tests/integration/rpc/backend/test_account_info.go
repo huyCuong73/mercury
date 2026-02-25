@@ -11,10 +11,10 @@ import (
 	"github.com/cometbft/cometbft/libs/bytes"
 	cmtrpcclient "github.com/cometbft/cometbft/rpc/client"
 
-	"github.com/cosmos/evm/rpc/backend/mocks"
-	rpctypes "github.com/cosmos/evm/rpc/types"
-	utiltx "github.com/cosmos/evm/testutil/tx"
-	evmtypes "github.com/cosmos/evm/x/vm/types"
+	"github.com/huyCuong73/mercury/rpc/backend/mocks"
+	rpctypes "github.com/huyCuong73/mercury/rpc/types"
+	utiltx "github.com/huyCuong73/mercury/testutil/tx"
+	evmtypes "github.com/huyCuong73/mercury/x/vm/types"
 
 	authtypes "github.com/cosmos/cosmos-sdk/x/auth/types"
 )

@@ -13,15 +13,15 @@ import (
 	//nolint:revive // dot imports are fine for Ginkgo
 	. "github.com/onsi/gomega"
 
-	cmn "github.com/cosmos/evm/precompiles/common"
-	"github.com/cosmos/evm/precompiles/gov"
-	"github.com/cosmos/evm/precompiles/testutil"
-	"github.com/cosmos/evm/precompiles/testutil/contracts"
-	commonfactory "github.com/cosmos/evm/testutil/integration/base/factory"
-	"github.com/cosmos/evm/testutil/integration/evm/network"
-	testutiltx "github.com/cosmos/evm/testutil/tx"
-	testutiltypes "github.com/cosmos/evm/testutil/types"
-	evmtypes "github.com/cosmos/evm/x/vm/types"
+	cmn "github.com/huyCuong73/mercury/precompiles/common"
+	"github.com/huyCuong73/mercury/precompiles/gov"
+	"github.com/huyCuong73/mercury/precompiles/testutil"
+	"github.com/huyCuong73/mercury/precompiles/testutil/contracts"
+	commonfactory "github.com/huyCuong73/mercury/testutil/integration/base/factory"
+	"github.com/huyCuong73/mercury/testutil/integration/evm/network"
+	testutiltx "github.com/huyCuong73/mercury/testutil/tx"
+	testutiltypes "github.com/huyCuong73/mercury/testutil/types"
+	evmtypes "github.com/huyCuong73/mercury/x/vm/types"
 
 	"cosmossdk.io/math"
 

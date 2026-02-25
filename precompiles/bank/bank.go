@@ -15,8 +15,8 @@ import (
 
 	_ "embed"
 
-	cmn "github.com/cosmos/evm/precompiles/common"
-	evmtypes "github.com/cosmos/evm/x/vm/types"
+	cmn "github.com/huyCuong73/mercury/precompiles/common"
+	evmtypes "github.com/huyCuong73/mercury/x/vm/types"
 
 	storetypes "cosmossdk.io/store/types"
 

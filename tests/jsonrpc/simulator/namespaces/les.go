@@ -1,6 +1,6 @@
 package namespaces
 
-import "github.com/cosmos/evm/tests/jsonrpc/simulator/types"
+import "github.com/huyCuong73/mercury/tests/jsonrpc/simulator/types"
 
 const (
 	// LES namespace (Light Ethereum Subprotocol)

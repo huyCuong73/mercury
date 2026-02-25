@@ -5,10 +5,10 @@ import (
 
 	"github.com/stretchr/testify/require"
 
-	"github.com/cosmos/evm/ante"
-	"github.com/cosmos/evm/crypto/ethsecp256k1"
-	"github.com/cosmos/evm/encoding"
-	"github.com/cosmos/evm/server/config"
+	"github.com/huyCuong73/mercury/ante"
+	"github.com/huyCuong73/mercury/crypto/ethsecp256k1"
+	"github.com/huyCuong73/mercury/encoding"
+	"github.com/huyCuong73/mercury/server/config"
 
 	storetypes "cosmossdk.io/store/types"
 

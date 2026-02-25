@@ -9,10 +9,10 @@ import (
 	cmtproto "github.com/cometbft/cometbft/proto/tendermint/types"
 	cmttime "github.com/cometbft/cometbft/types/time"
 
-	"github.com/cosmos/evm/testutil/constants"
-	vmkeeper "github.com/cosmos/evm/x/vm/keeper"
-	vmtypes "github.com/cosmos/evm/x/vm/types"
-	"github.com/cosmos/evm/x/vm/types/mocks"
+	"github.com/huyCuong73/mercury/testutil/constants"
+	vmkeeper "github.com/huyCuong73/mercury/x/vm/keeper"
+	vmtypes "github.com/huyCuong73/mercury/x/vm/types"
+	"github.com/huyCuong73/mercury/x/vm/types/mocks"
 
 	storetypes "cosmossdk.io/store/types"
 

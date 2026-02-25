@@ -6,8 +6,8 @@ import (
 
 	abcitypes "github.com/cometbft/cometbft/abci/types"
 
-	testutiltypes "github.com/cosmos/evm/testutil/types"
-	evmtypes "github.com/cosmos/evm/x/vm/types"
+	testutiltypes "github.com/huyCuong73/mercury/testutil/types"
+	evmtypes "github.com/huyCuong73/mercury/x/vm/types"
 )
 
 // CheckTxTopics checks if all expected topics are present in the transaction response

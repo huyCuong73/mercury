@@ -8,10 +8,10 @@ import (
 	"github.com/ethereum/go-ethereum/core/txpool"
 	ethtypes "github.com/ethereum/go-ethereum/core/types"
 
-	anteinterfaces "github.com/cosmos/evm/ante/interfaces"
-	feemarkettypes "github.com/cosmos/evm/x/feemarket/types"
-	evmkeeper "github.com/cosmos/evm/x/vm/keeper"
-	evmtypes "github.com/cosmos/evm/x/vm/types"
+	anteinterfaces "github.com/huyCuong73/mercury/ante/interfaces"
+	feemarkettypes "github.com/huyCuong73/mercury/x/feemarket/types"
+	evmkeeper "github.com/huyCuong73/mercury/x/vm/keeper"
+	evmtypes "github.com/huyCuong73/mercury/x/vm/types"
 
 	errorsmod "cosmossdk.io/errors"
 	sdkmath "cosmossdk.io/math"

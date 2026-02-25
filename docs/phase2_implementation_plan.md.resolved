@@ -1,0 +1,239 @@
+# Phase 2: Core Development - Implementation Plan
+
+## Tổng Quan
+
+Phase 2 tập trung vào việc phát triển **business logic riêng** cho Mercury chain. Dựa trên codebase hiện tại, bạn đã có sẵn:
+
+| Module có sẵn | Mục đích |
+|---------------|----------|
+| `x/vm` | EVM execution engine |
+| `x/erc20` | Token conversion Cosmos ↔ EVM |
+| `x/feemarket` | EIP-1559 fee mechanism |
+| `x/ibc` | Inter-Blockchain Communication |
+| `x/precisebank` | High-precision token handling |
+
+---
+
+## 2.1 Custom Modules Development
+
+### Bước 1: Xác định Use Case
+
+Trước khi code, hãy trả lời các câu hỏi:
+- Chain của bạn giải quyết vấn đề gì?
+- Cần những tính năng gì mà Ethereum/Cosmos chưa có?
+- Có cần tích hợp với EVM (Solidity) không?
+
+**Ví dụ use cases:**
+- **DeFi**: Staking pools, Lending protocols
+- **Gaming**: NFT marketplace, In-game assets
+- **Enterprise**: Permissioned access, KYC module
+- **Social**: Reputation system, Tipping
+
+---
+
+### Bước 2: Tạo Custom Module mới
+
+Cấu trúc một Cosmos SDK module:
+
+```
+x/mymodule/
+├── keeper/
+│   ├── keeper.go       # State management
+│   ├── msg_server.go   # Transaction handlers
+│   └── query_server.go # Query handlers
+├── types/
+│   ├── keys.go         # Store keys
+│   ├── msgs.go         # Message types
+│   ├── params.go       # Module parameters
+│   └── genesis.go      # Genesis state
+├── module.go           # Module registration
+└── README.md
+```
+
+**Lệnh tạo scaffolding (nếu dùng Ignite CLI):**
+```bash
+ignite scaffold module mymodule --dep bank,staking
+```
+
+**Hoặc tạo thủ công:**
+1. Copy cấu trúc từ `x/precisebank/` làm template
+2. Đổi tên package và types
+3. Implement logic riêng
+
+---
+
+### Bước 3: Đăng ký Module vào App
+
+Sửa file [mercuryd/app.go](file:///wsl.localhost/Ubuntu/home/thc/mercury/mercuryd/app.go):
+
+```go
+import (
+    // ... existing imports
+    "github.com/cosmos/mercury/x/mymodule"
+    mymodulekeeper "github.com/cosmos/mercury/x/mymodule/keeper"
+)
+
+// Trong struct MercuryApp, thêm:
+MyModuleKeeper mymodulekeeper.Keeper
+
+// Trong NewMercuryApp(), khởi tạo keeper và đăng ký module
+```
+
+---
+
+### Bước 4: Tạo Precompile (EVM Integration)
+
+Nếu muốn gọi module từ Solidity, tạo precompile:
+
+**Cấu trúc precompile:**
+```
+precompiles/mymodule/
+├── abi.json           # Solidity ABI
+├── contract.sol       # Interface definition
+├── mymodule.go        # Go implementation
+├── methods.go         # Method handlers
+└── tx.go              # Transaction methods
+```
+
+**Ví dụ precompile address:**
+```go
+// precompiles/mymodule/mymodule.go
+const PrecompileAddress = "0x0000000000000000000000000000000000000900"
+```
+
+**Đăng ký trong genesis (local_node.sh):**
+```bash
+jq '.app_state["evm"]["params"]["active_static_precompiles"] += ["0x0000000000000000000000000000000000000900"]'
+```
+
+---
+
+## 2.2 Tokenomics Configuration
+
+### Các thông số cần quyết định:
+
+| Thông số | File cấu hình | Mô tả |
+|----------|---------------|-------|
+| Total Supply | `local_node.sh` / genesis | Tổng số token ban đầu |
+| Inflation Rate | `app_state.mint.params` | Tỷ lệ lạm phát hàng năm |
+| Staking Rewards | `app_state.distribution` | Phần thưởng cho validators |
+| Fee Burn | Custom implementation | Đốt % phí giao dịch |
+
+### Cấu hình Inflation (Mint Module):
+
+Trong `local_node.sh`, thêm:
+```bash
+jq '.app_state["mint"]["params"]["inflation_rate_change"]="0.130000000000000000"' "$GENESIS" >"$TMP_GENESIS" && mv "$TMP_GENESIS" "$GENESIS"
+jq '.app_state["mint"]["params"]["inflation_max"]="0.200000000000000000"' "$GENESIS" >"$TMP_GENESIS" && mv "$TMP_GENESIS" "$GENESIS"
+jq '.app_state["mint"]["params"]["inflation_min"]="0.070000000000000000"' "$GENESIS" >"$TMP_GENESIS" && mv "$TMP_GENESIS" "$GENESIS"
+jq '.app_state["mint"]["params"]["goal_bonded"]="0.670000000000000000"' "$GENESIS" >"$TMP_GENESIS" && mv "$TMP_GENESIS" "$GENESIS"
+```
+
+### Cấu hình Fee Burn (EIP-1559 style):
+
+Sửa trong `x/feemarket/keeper/`:
+```go
+// Burn a percentage of base fee
+burnAmount := baseFee.Mul(burnPercentage)
+```
+
+---
+
+## 2.3 Governance Customization
+
+### Thay đổi voting parameters:
+
+```bash
+# Trong local_node.sh hoặc genesis
+jq '.app_state["gov"]["params"]["voting_period"]="172800s"' ...      # 2 days
+jq '.app_state["gov"]["params"]["min_deposit"][0]["amount"]="10000000000000000000"' ... # 10 MERC
+jq '.app_state["gov"]["params"]["quorum"]="0.334000000000000000"' ... # 33.4%
+jq '.app_state["gov"]["params"]["threshold"]="0.500000000000000000"' ... # 50%
+```
+
+### Custom Proposal Types:
+
+Tạo custom proposal trong module của bạn:
+```go
+// x/mymodule/types/proposal.go
+type MyCustomProposal struct {
+    Title       string
+    Description string
+    // Custom fields
+}
+```
+
+---
+
+## 2.4 Security Features
+
+### Permissioned EVM (Whitelist/Blacklist):
+
+Cosmos EVM hỗ trợ access control. Cấu hình trong genesis:
+```bash
+# Chỉ cho phép địa chỉ cụ thể deploy contracts
+jq '.app_state["evm"]["params"]["access_control"]["create"]["access_type"]="restricted"' ...
+jq '.app_state["evm"]["params"]["access_control"]["create"]["access_list"]=["0x..."]' ...
+```
+
+### Rate Limiting cho RPC:
+
+Sửa trong `mercuryd/config/config.go` hoặc `app.toml`:
+```toml
+[json-rpc]
+http-idle-timeout = "120s"
+max-open-connections = 100
+```
+
+---
+
+## 2.5 Smart Contract Development
+
+### Deploy Core Contracts:
+
+1. **WMERC (Wrapped Mercury)** - Nếu cần wrapped token
+2. **Multicall** - Batch calls
+3. **Router/Factory** - Nếu làm DEX
+
+**Sử dụng Foundry:**
+```bash
+cd contracts
+forge create --rpc-url http://localhost:8545 \
+  --private-key $PRIVATE_KEY \
+  src/WMERC.sol:WMERC
+```
+
+---
+
+## Verification Checklist
+
+### Sau khi hoàn thành Phase 2:
+- [ ] Custom module compile không lỗi (`go build ./...`)
+- [ ] Tests pass (`make test-unit`)
+- [ ] Genesis validate thành công
+- [ ] Node khởi động được với custom module
+- [ ] Precompile có thể gọi từ Solidity
+- [ ] Tokenomics hoạt động đúng (check inflation, rewards)
+
+---
+
+## Timeline Đề Xuất
+
+| Tuần | Công việc |
+|------|-----------|
+| 2 | Thiết kế architecture, xác định use case |
+| 3 | Phát triển custom module skeleton |
+| 4 | Implement business logic |
+| 5 | Tạo precompile (nếu cần) |
+| 6 | Integration testing, bug fixes |
+
+---
+
+## Câu Hỏi Cần Trả Lời
+
+> [!IMPORTANT]
+> Để tiếp tục, bạn cần xác định:
+> 1. **Use case chính** của Mercury chain là gì?
+> 2. Có cần **custom module** không? Nếu có, module đó làm gì?
+> 3. **Tokenomics**: Inflation rate, staking rewards mong muốn?
+> 4. Có cần **permissioned EVM** không?

@@ -20,7 +20,7 @@ import (
 	//nolint:revive // dot imports are fine for Ginkgo
 	. "github.com/onsi/gomega"
 
-	suite "github.com/cosmos/evm/tests/systemtests/suite"
+	suite "github.com/huyCuong73/mercury/tests/systemtests/suite"
 	"github.com/stretchr/testify/require"
 )
 

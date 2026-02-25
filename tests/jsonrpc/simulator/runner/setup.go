@@ -12,10 +12,10 @@ import (
 	"github.com/ethereum/go-ethereum/common"
 	ethtypes "github.com/ethereum/go-ethereum/core/types"
 
-	"github.com/cosmos/evm/tests/jsonrpc/simulator/config"
-	"github.com/cosmos/evm/tests/jsonrpc/simulator/contracts"
-	"github.com/cosmos/evm/tests/jsonrpc/simulator/types"
-	"github.com/cosmos/evm/tests/jsonrpc/simulator/utils"
+	"github.com/huyCuong73/mercury/tests/jsonrpc/simulator/config"
+	"github.com/huyCuong73/mercury/tests/jsonrpc/simulator/contracts"
+	"github.com/huyCuong73/mercury/tests/jsonrpc/simulator/types"
+	"github.com/huyCuong73/mercury/tests/jsonrpc/simulator/utils"
 )
 
 // Setup performs the complete setup: fund geth accounts, deploy contracts, and mint tokens
@@ -63,7 +63,7 @@ func Setup() (*types.RPCContext, error) {
 	if err != nil {
 		return nil, fmt.Errorf("failed to create filter: %w", err)
 	}
-	log.Printf("Created filter for ERC20 transfers: evmd=%s, geth=%s\n", rCtx.Evmd.FilterID, rCtx.Geth.FilterID)
+	log.Printf("Created filter for ERC20 transfers: mercuryd=%s, geth=%s\n", rCtx.Evmd.FilterID, rCtx.Geth.FilterID)
 
 	return rCtx, nil
 }
@@ -107,7 +107,7 @@ func fundGethAccounts(rCtx *types.RPCContext) error {
 	return nil
 }
 
-// deployContracts deploys the ERC20 contract to both evmd and geth
+// deployContracts deploys the ERC20 contract to both mercuryd and geth
 func deployContracts(rCtx *types.RPCContext) error {
 	// Read the ABI file
 	abiFile, err := os.ReadFile("contracts/ERC20Token.abi")
@@ -145,7 +145,7 @@ func deployContracts(rCtx *types.RPCContext) error {
 	return nil
 }
 
-// mintTokensOnBothNetworks distributes ERC20 tokens to specified accounts on both evmd and geth
+// mintTokensOnBothNetworks distributes ERC20 tokens to specified accounts on both mercuryd and geth
 func mintTokensOnBothNetworks(rCtx *types.RPCContext) error {
 	fmt.Printf("\n=== Distributing ERC20 Tokens for State Synchronization ===\n")
 
@@ -156,11 +156,11 @@ func mintTokensOnBothNetworks(rCtx *types.RPCContext) error {
 		config.Dev3PrivateKey: new(big.Int).Mul(big.NewInt(750), big.NewInt(1e18)),  // 750 tokens
 	}
 
-	// Distribute on evmd (from dev0 who deployed the contract)
-	fmt.Printf("Distributing tokens on evmd (contract: %s)...\n", rCtx.Evmd.ERC20Addr.Hex())
-	evmdReceipts, err := distributeTokensOnNetwork(rCtx, distributionTargets, config.Dev0PrivateKey, false)
+	// Distribute on mercuryd (from dev0 who deployed the contract)
+	fmt.Printf("Distributing tokens on mercuryd (contract: %s)...\n", rCtx.Evmd.ERC20Addr.Hex())
+	mercurydReceipts, err := distributeTokensOnNetwork(rCtx, distributionTargets, config.Dev0PrivateKey, false)
 	if err != nil {
-		return fmt.Errorf("failed to distribute tokens on evmd: %w", err)
+		return fmt.Errorf("failed to distribute tokens on mercuryd: %w", err)
 	}
 
 	// Distribute on geth (need to first transfer from coinbase to dev1, then distribute)
@@ -171,11 +171,11 @@ func mintTokensOnBothNetworks(rCtx *types.RPCContext) error {
 	}
 
 	// Count successful distributions
-	evmdSuccess := 0
+	mercurydSuccess := 0
 	gethSuccess := 0
-	for _, receipt := range evmdReceipts {
+	for _, receipt := range mercurydReceipts {
 		if receipt.Status == 1 {
-			evmdSuccess++
+			mercurydSuccess++
 		}
 	}
 	for _, receipt := range gethReceipts {
@@ -184,10 +184,10 @@ func mintTokensOnBothNetworks(rCtx *types.RPCContext) error {
 		}
 	}
 
-	fmt.Printf("\nDistribution summary: evmd (%d/%d), geth (%d/%d)\n",
-		evmdSuccess, len(evmdReceipts), gethSuccess, len(gethReceipts))
+	fmt.Printf("\nDistribution summary: mercuryd (%d/%d), geth (%d/%d)\n",
+		mercurydSuccess, len(mercurydReceipts), gethSuccess, len(gethReceipts))
 
-	if evmdSuccess != len(distributionTargets) || gethSuccess != len(distributionTargets) {
+	if mercurydSuccess != len(distributionTargets) || gethSuccess != len(distributionTargets) {
 		return fmt.Errorf("distribution failed - not all accounts received tokens")
 	}
 
@@ -230,7 +230,7 @@ func distributeTokensOnNetwork(rCtx *types.RPCContext, distributionTargets map[s
 func newFilter(rCtx *types.RPCContext) error {
 	filterQuery, filterID, err := utils.NewERC20FilterLogs(rCtx, false)
 	if err != nil {
-		return fmt.Errorf("failed to create evmd filter: %w", err)
+		return fmt.Errorf("failed to create mercuryd filter: %w", err)
 	}
 	rCtx.Evmd.FilterID = filterID
 	rCtx.Evmd.FilterQuery = filterQuery
@@ -238,7 +238,7 @@ func newFilter(rCtx *types.RPCContext) error {
 	// Create filter on geth
 	filterQuery, filterID, err = utils.NewERC20FilterLogs(rCtx, true)
 	if err != nil {
-		return fmt.Errorf("failed to create evmd filter: %w", err)
+		return fmt.Errorf("failed to create mercuryd filter: %w", err)
 	}
 	rCtx.Geth.FilterID = filterID
 	rCtx.Geth.FilterQuery = filterQuery

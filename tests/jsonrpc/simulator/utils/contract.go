@@ -9,8 +9,8 @@ import (
 	"github.com/ethereum/go-ethereum/common"
 	ethtypes "github.com/ethereum/go-ethereum/core/types"
 
-	"github.com/cosmos/evm/tests/jsonrpc/simulator/config"
-	"github.com/cosmos/evm/tests/jsonrpc/simulator/types"
+	"github.com/huyCuong73/mercury/tests/jsonrpc/simulator/config"
+	"github.com/huyCuong73/mercury/tests/jsonrpc/simulator/types"
 )
 
 // TransferTokensToAccount transfers ERC20 tokens from owner to a specific account
@@ -40,10 +40,10 @@ func VerifyTokenBalances(rCtx *types.RPCContext) error {
 			return fmt.Errorf("failed to get address for verification: %w", err)
 		}
 
-		// Get balance on evmd
-		evmdBalance, err := getTokenBalance(rCtx, addr, false)
+		// Get balance on mercuryd
+		mercurydBalance, err := getTokenBalance(rCtx, addr, false)
 		if err != nil {
-			return fmt.Errorf("failed to get evmd balance for %s: %w", addr.Hex(), err)
+			return fmt.Errorf("failed to get mercuryd balance for %s: %w", addr.Hex(), err)
 		}
 
 		// Get balance on geth
@@ -53,12 +53,12 @@ func VerifyTokenBalances(rCtx *types.RPCContext) error {
 		}
 
 		// Compare balances
-		if evmdBalance.Cmp(gethBalance) != 0 {
-			return fmt.Errorf("balance mismatch for %s: evmd=%s, geth=%s",
-				addr.Hex(), evmdBalance.String(), gethBalance.String())
+		if mercurydBalance.Cmp(gethBalance) != 0 {
+			return fmt.Errorf("balance mismatch for %s: mercuryd=%s, geth=%s",
+				addr.Hex(), mercurydBalance.String(), gethBalance.String())
 		}
 
-		readableBalance := new(big.Int).Div(evmdBalance, big.NewInt(1e18))
+		readableBalance := new(big.Int).Div(mercurydBalance, big.NewInt(1e18))
 		fmt.Printf("  ✓ %s: %s tokens (identical on both networks)\n",
 			addr.Hex()[:10]+"...", readableBalance.String())
 	}

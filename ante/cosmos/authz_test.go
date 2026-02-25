@@ -7,11 +7,11 @@ import (
 
 	"github.com/stretchr/testify/require"
 
-	"github.com/cosmos/evm/ante/cosmos"
-	"github.com/cosmos/evm/encoding"
-	"github.com/cosmos/evm/testutil"
-	"github.com/cosmos/evm/testutil/constants"
-	evmtypes "github.com/cosmos/evm/x/vm/types"
+	"github.com/huyCuong73/mercury/ante/cosmos"
+	"github.com/huyCuong73/mercury/encoding"
+	"github.com/huyCuong73/mercury/testutil"
+	"github.com/huyCuong73/mercury/testutil/constants"
+	evmtypes "github.com/huyCuong73/mercury/x/vm/types"
 
 	sdk "github.com/cosmos/cosmos-sdk/types"
 	sdkerrors "github.com/cosmos/cosmos-sdk/types/errors"

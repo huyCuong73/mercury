@@ -8,9 +8,9 @@ import (
 	"github.com/ethereum/go-ethereum/common/hexutil"
 	"github.com/ethereum/go-ethereum/core/vm"
 
-	rpc "github.com/cosmos/evm/rpc/types"
-	"github.com/cosmos/evm/x/vm/statedb"
-	"github.com/cosmos/evm/x/vm/types/mocks"
+	rpc "github.com/huyCuong73/mercury/rpc/types"
+	"github.com/huyCuong73/mercury/x/vm/statedb"
+	"github.com/huyCuong73/mercury/x/vm/types/mocks"
 
 	sdk "github.com/cosmos/cosmos-sdk/types"
 )

@@ -6,10 +6,10 @@ import (
 	"github.com/ethereum/go-ethereum/common"
 	"github.com/stretchr/testify/require"
 
-	evm "github.com/cosmos/evm"
-	"github.com/cosmos/evm/ante"
-	antetypes "github.com/cosmos/evm/ante/types"
-	"github.com/cosmos/evm/testutil/integration/evm/network"
+	evm "github.com/huyCuong73/mercury"
+	"github.com/huyCuong73/mercury/ante"
+	antetypes "github.com/huyCuong73/mercury/ante/types"
+	"github.com/huyCuong73/mercury/testutil/integration/evm/network"
 )
 
 //nolint:thelper // RunValidateHandlerOptionsTest is not a helper function; it's an externally called benchmark entry point

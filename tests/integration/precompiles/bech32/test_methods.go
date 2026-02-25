@@ -5,8 +5,8 @@ import (
 
 	"github.com/ethereum/go-ethereum/common"
 
-	"github.com/cosmos/evm/precompiles/bech32"
-	cmn "github.com/cosmos/evm/precompiles/common"
+	"github.com/huyCuong73/mercury/precompiles/bech32"
+	cmn "github.com/huyCuong73/mercury/precompiles/common"
 
 	sdk "github.com/cosmos/cosmos-sdk/types"
 )

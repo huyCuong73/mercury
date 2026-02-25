@@ -11,7 +11,7 @@ import (
 	"github.com/pkg/errors"
 	"github.com/spf13/cobra"
 
-	"github.com/cosmos/evm/ethereum/eip712"
+	"github.com/huyCuong73/mercury/ethereum/eip712"
 
 	"github.com/cosmos/cosmos-sdk/client"
 	cosmosclientdebug "github.com/cosmos/cosmos-sdk/client/debug"
@@ -166,7 +166,7 @@ func LegacyEIP712Cmd() *cobra.Command {
 	return &cobra.Command{
 		Use:     "legacy-eip712 [file] [evm-chain-id]",
 		Short:   "Output types of legacy eip712 typed data according to the given transaction",
-		Example: fmt.Sprintf(`$ %s debug legacy-eip712 tx.json 4221 --chain-id evmd-1`, version.AppName),
+		Example: fmt.Sprintf(`$ %s debug legacy-eip712 tx.json 4221 --chain-id mercuryd-1`, version.AppName),
 		Args:    cobra.ExactArgs(2),
 		RunE: func(cmd *cobra.Command, args []string) error {
 			clientCtx, err := client.GetClientTxContext(cmd)

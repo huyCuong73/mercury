@@ -4,8 +4,8 @@ import (
 	"github.com/ethereum/go-ethereum/common"
 	"github.com/ethereum/go-ethereum/crypto"
 
-	"github.com/cosmos/evm/x/erc20/types"
-	"github.com/cosmos/evm/x/vm/statedb"
+	"github.com/huyCuong73/mercury/x/erc20/types"
+	"github.com/huyCuong73/mercury/x/vm/statedb"
 
 	sdk "github.com/cosmos/cosmos-sdk/types"
 )

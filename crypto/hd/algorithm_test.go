@@ -8,8 +8,8 @@ import (
 	"github.com/ethereum/go-ethereum/common"
 	"github.com/stretchr/testify/require"
 
-	cryptocodec "github.com/cosmos/evm/crypto/codec"
-	enccodec "github.com/cosmos/evm/encoding/codec"
+	cryptocodec "github.com/huyCuong73/mercury/crypto/codec"
+	enccodec "github.com/huyCuong73/mercury/encoding/codec"
 
 	amino "github.com/cosmos/cosmos-sdk/codec"
 	"github.com/cosmos/cosmos-sdk/codec/types"

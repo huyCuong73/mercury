@@ -25,8 +25,8 @@ const (
 )
 
 type Config struct {
-	EvmdHttpEndpoint string `yaml:"evmd_http_endpoint"`
-	EvmdWsEndpoint   string `yaml:"evmd_ws_endpoint"`
+	EvmdHttpEndpoint string `yaml:"mercuryd_http_endpoint"`
+	EvmdWsEndpoint   string `yaml:"mercuryd_ws_endpoint"`
 	GethHttpEndpoint string `yaml:"geth_http_endpoint"`
 	GethWsEndpoint   string `yaml:"geth_ws_endpoint"`
 
@@ -60,9 +60,9 @@ func (c *Config) Validate() error {
 
 func MustLoadConfig() *Config {
 	// Use environment variable if set, otherwise default to localhost
-	evmdURL := os.Getenv("EVMD_URL")
-	if evmdURL == "" {
-		evmdURL = EvmdHttpEndpoint
+	mercurydURL := os.Getenv("EVMD_URL")
+	if mercurydURL == "" {
+		mercurydURL = EvmdHttpEndpoint
 	}
 
 	gethURL := os.Getenv("GETH_URL")
@@ -71,9 +71,9 @@ func MustLoadConfig() *Config {
 	}
 
 	// Handle WebSocket URLs - derive from HTTP URLs or use environment variables
-	evmdWsURL := os.Getenv("EVMD_WS_URL")
-	if evmdWsURL == "" {
-		evmdWsURL = EvmdWsEndpoint
+	mercurydWsURL := os.Getenv("EVMD_WS_URL")
+	if mercurydWsURL == "" {
+		mercurydWsURL = EvmdWsEndpoint
 	}
 
 	gethWsURL := os.Getenv("GETH_WS_URL")
@@ -82,8 +82,8 @@ func MustLoadConfig() *Config {
 	}
 
 	return &Config{
-		EvmdHttpEndpoint: evmdURL,
-		EvmdWsEndpoint:   evmdWsURL,
+		EvmdHttpEndpoint: mercurydURL,
+		EvmdWsEndpoint:   mercurydWsURL,
 		GethHttpEndpoint: gethURL,
 		GethWsEndpoint:   gethWsURL,
 		RichPrivKey:      Dev0PrivateKey, // Default to dev0's private key

@@ -6,9 +6,9 @@ import (
 
 	"github.com/holiman/uint256"
 
-	"github.com/cosmos/evm/utils"
-	precisebanktypes "github.com/cosmos/evm/x/precisebank/types"
-	evmtypes "github.com/cosmos/evm/x/vm/types"
+	"github.com/huyCuong73/mercury/utils"
+	precisebanktypes "github.com/huyCuong73/mercury/x/precisebank/types"
+	evmtypes "github.com/huyCuong73/mercury/x/vm/types"
 
 	sdkmath "cosmossdk.io/math"
 

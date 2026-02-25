@@ -4,9 +4,9 @@ import (
 	"github.com/ethereum/go-ethereum/common"
 	ethtypes "github.com/ethereum/go-ethereum/core/types"
 
-	anteinterfaces "github.com/cosmos/evm/ante/interfaces"
-	"github.com/cosmos/evm/x/vm/keeper"
-	"github.com/cosmos/evm/x/vm/statedb"
+	anteinterfaces "github.com/huyCuong73/mercury/ante/interfaces"
+	"github.com/huyCuong73/mercury/x/vm/keeper"
+	"github.com/huyCuong73/mercury/x/vm/statedb"
 
 	errorsmod "cosmossdk.io/errors"
 	sdkmath "cosmossdk.io/math"

@@ -13,7 +13,7 @@ import (
 	"github.com/creachadair/tomledit/parser"
 	"github.com/stretchr/testify/require"
 
-	"github.com/cosmos/evm/tests/systemtests/suite"
+	"github.com/huyCuong73/mercury/tests/systemtests/suite"
 )
 
 const txPoolContentTimeout = 120 * time.Second

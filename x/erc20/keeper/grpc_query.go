@@ -6,8 +6,8 @@ import (
 	"google.golang.org/grpc/codes"
 	"google.golang.org/grpc/status"
 
-	"github.com/cosmos/evm/utils"
-	"github.com/cosmos/evm/x/erc20/types"
+	"github.com/huyCuong73/mercury/utils"
+	"github.com/huyCuong73/mercury/x/erc20/types"
 
 	"cosmossdk.io/store/prefix"
 

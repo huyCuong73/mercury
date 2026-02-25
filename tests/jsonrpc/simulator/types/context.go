@@ -16,7 +16,7 @@ import (
 	"github.com/ethereum/go-ethereum/ethclient"
 	ethrpc "github.com/ethereum/go-ethereum/rpc"
 
-	"github.com/cosmos/evm/tests/jsonrpc/simulator/config"
+	"github.com/huyCuong73/mercury/tests/jsonrpc/simulator/config"
 )
 
 type Account struct {
@@ -24,17 +24,17 @@ type Account struct {
 	PrivKey *ecdsa.PrivateKey
 }
 
-// ComparisonResult holds the result of comparing API response structures between evmd and geth
+// ComparisonResult holds the result of comparing API response structures between mercuryd and geth
 type ComparisonResult struct {
 	Method         string            `json:"method"`
-	EvmdType       string            `json:"evmd_type"`
+	EvmdType       string            `json:"mercuryd_type"`
 	GethType       string            `json:"geth_type"`
-	EvmdStructure  map[string]string `json:"evmd_structure,omitempty"` // Field names -> types
+	EvmdStructure  map[string]string `json:"mercuryd_structure,omitempty"` // Field names -> types
 	GethStructure  map[string]string `json:"geth_structure,omitempty"` // Field names -> types
 	TypeMatch      bool              `json:"type_match"`
 	StructureMatch bool              `json:"structure_match"`
 	ErrorsMatch    bool              `json:"errors_match"`
-	EvmdError      string            `json:"evmd_error,omitempty"`
+	EvmdError      string            `json:"mercuryd_error,omitempty"`
 	GethError      string            `json:"geth_error,omitempty"`
 	Differences    []string          `json:"differences,omitempty"`
 }
@@ -77,7 +77,7 @@ type RPCContext struct {
 }
 
 func NewRPCContext(conf *config.Config) (*RPCContext, error) {
-	// Connect to the primary Ethereum client (evmd)
+	// Connect to the primary Ethereum client (mercuryd)
 	ethCli, err := ethclient.Dial(conf.EvmdHttpEndpoint)
 	if err != nil {
 		return nil, err
@@ -133,11 +133,11 @@ func (rCtx *RPCContext) CompareRPCCall(method string, params ...interface{}) *Co
 		Method: method,
 	}
 
-	// Call evmd
-	var evmdResponse interface{}
-	evmdErr := rCtx.Evmd.RPCClient().CallContext(context.Background(), &evmdResponse, method, params...)
-	if evmdErr != nil {
-		result.EvmdError = evmdErr.Error()
+	// Call mercuryd
+	var mercurydResponse interface{}
+	mercurydErr := rCtx.Evmd.RPCClient().CallContext(context.Background(), &mercurydResponse, method, params...)
+	if mercurydErr != nil {
+		result.EvmdError = mercurydErr.Error()
 	}
 
 	// Call geth
@@ -148,16 +148,16 @@ func (rCtx *RPCContext) CompareRPCCall(method string, params ...interface{}) *Co
 	}
 
 	// Compare errors
-	result.ErrorsMatch = (evmdErr == nil && gethErr == nil) ||
-		(evmdErr != nil && gethErr != nil)
+	result.ErrorsMatch = (mercurydErr == nil && gethErr == nil) ||
+		(mercurydErr != nil && gethErr != nil)
 
 	// Compare structure and types if both succeeded
-	if evmdErr == nil && gethErr == nil {
-		result.EvmdType = rCtx.getTypeDescription(evmdResponse)
+	if mercurydErr == nil && gethErr == nil {
+		result.EvmdType = rCtx.getTypeDescription(mercurydResponse)
 		result.GethType = rCtx.getTypeDescription(gethResponse)
 		result.TypeMatch = result.EvmdType == result.GethType
 
-		result.EvmdStructure = rCtx.analyzeStructure(evmdResponse)
+		result.EvmdStructure = rCtx.analyzeStructure(mercurydResponse)
 		result.GethStructure = rCtx.analyzeStructure(gethResponse)
 		result.StructureMatch = rCtx.compareStructures(result.EvmdStructure, result.GethStructure)
 
@@ -183,14 +183,14 @@ func (rCtx *RPCContext) CompareRPCCallWithProvider(method string, paramProvider 
 	}
 
 	// Get parameters for each client
-	evmdParams := paramProvider(false) // false = evmd
+	mercurydParams := paramProvider(false) // false = mercuryd
 	gethParams := paramProvider(true)  // true = geth
 
-	// Call evmd
-	var evmdResponse interface{}
-	evmdErr := rCtx.Evmd.RPCClient().CallContext(context.Background(), &evmdResponse, method, evmdParams...)
-	if evmdErr != nil {
-		result.EvmdError = evmdErr.Error()
+	// Call mercuryd
+	var mercurydResponse interface{}
+	mercurydErr := rCtx.Evmd.RPCClient().CallContext(context.Background(), &mercurydResponse, method, mercurydParams...)
+	if mercurydErr != nil {
+		result.EvmdError = mercurydErr.Error()
 	}
 
 	// Call geth
@@ -201,16 +201,16 @@ func (rCtx *RPCContext) CompareRPCCallWithProvider(method string, paramProvider 
 	}
 
 	// Compare errors
-	result.ErrorsMatch = (evmdErr == nil && gethErr == nil) ||
-		(evmdErr != nil && gethErr != nil)
+	result.ErrorsMatch = (mercurydErr == nil && gethErr == nil) ||
+		(mercurydErr != nil && gethErr != nil)
 
 	// Only compare structure and types if BOTH succeeded
-	if evmdErr == nil && gethErr == nil {
-		result.EvmdType = rCtx.getTypeDescription(evmdResponse)
+	if mercurydErr == nil && gethErr == nil {
+		result.EvmdType = rCtx.getTypeDescription(mercurydResponse)
 		result.GethType = rCtx.getTypeDescription(gethResponse)
 		result.TypeMatch = result.EvmdType == result.GethType
 
-		result.EvmdStructure = rCtx.analyzeStructure(evmdResponse)
+		result.EvmdStructure = rCtx.analyzeStructure(mercurydResponse)
 		result.GethStructure = rCtx.analyzeStructure(gethResponse)
 		result.StructureMatch = rCtx.compareStructures(result.EvmdStructure, result.GethStructure)
 
@@ -220,10 +220,10 @@ func (rCtx *RPCContext) CompareRPCCallWithProvider(method string, paramProvider 
 	} else {
 		// If either failed, we can't compare structures meaningfully
 		// This is a request failure, not a structural difference
-		if evmdErr != nil && gethErr == nil {
-			result.Differences = []string{"evmd request failed, geth succeeded - cannot compare structures"}
-		} else if evmdErr == nil && gethErr != nil {
-			result.Differences = []string{"geth request failed, evmd succeeded - cannot compare structures"}
+		if mercurydErr != nil && gethErr == nil {
+			result.Differences = []string{"mercuryd request failed, geth succeeded - cannot compare structures"}
+		} else if mercurydErr == nil && gethErr != nil {
+			result.Differences = []string{"geth request failed, mercuryd succeeded - cannot compare structures"}
 		} else {
 			result.Differences = []string{"both requests failed - cannot compare structures"}
 		}
@@ -342,39 +342,39 @@ func (rCtx *RPCContext) compareStructures(struct1, struct2 map[string]string) bo
 }
 
 // findStructuralDifferences finds structural differences between responses
-func (rCtx *RPCContext) findStructuralDifferences(evmdType, gethType string, evmdStruct, gethStruct map[string]string) []string {
+func (rCtx *RPCContext) findStructuralDifferences(mercurydType, gethType string, mercurydStruct, gethStruct map[string]string) []string {
 	var differences []string
 
 	// Type comparison
-	if evmdType != gethType {
-		differences = append(differences, fmt.Sprintf("Root type mismatch: evmd=%s, geth=%s", evmdType, gethType))
+	if mercurydType != gethType {
+		differences = append(differences, fmt.Sprintf("Root type mismatch: mercuryd=%s, geth=%s", mercurydType, gethType))
 	}
 
-	// Find missing fields in evmd
+	// Find missing fields in mercuryd
 	for field, fieldType := range gethStruct {
-		if _, exists := evmdStruct[field]; !exists {
-			differences = append(differences, fmt.Sprintf("Missing field in evmd: %s (%s)", field, fieldType))
+		if _, exists := mercurydStruct[field]; !exists {
+			differences = append(differences, fmt.Sprintf("Missing field in mercuryd: %s (%s)", field, fieldType))
 		}
 	}
 
-	// Find extra fields in evmd
-	for field, fieldType := range evmdStruct {
+	// Find extra fields in mercuryd
+	for field, fieldType := range mercurydStruct {
 		if _, exists := gethStruct[field]; !exists {
-			differences = append(differences, fmt.Sprintf("Extra field in evmd: %s (%s)", field, fieldType))
+			differences = append(differences, fmt.Sprintf("Extra field in mercuryd: %s (%s)", field, fieldType))
 		}
 	}
 
 	// Find type mismatches
-	for field, evmdFieldType := range evmdStruct {
-		if gethFieldType, exists := gethStruct[field]; exists && evmdFieldType != gethFieldType {
-			differences = append(differences, fmt.Sprintf("Type mismatch for %s: evmd=%s, geth=%s", field, evmdFieldType, gethFieldType))
+	for field, mercurydFieldType := range mercurydStruct {
+		if gethFieldType, exists := gethStruct[field]; exists && mercurydFieldType != gethFieldType {
+			differences = append(differences, fmt.Sprintf("Type mismatch for %s: mercuryd=%s, geth=%s", field, mercurydFieldType, gethFieldType))
 		}
 	}
 
 	return differences
 }
 
-// ParameterProvider is a function that provides parameters for evmd and geth separately
+// ParameterProvider is a function that provides parameters for mercuryd and geth separately
 type ParameterProvider func(isGeth bool) []interface{}
 
 // PerformComparison performs dual API comparison with logging if enabled

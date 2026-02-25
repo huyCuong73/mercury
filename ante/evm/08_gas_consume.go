@@ -6,9 +6,9 @@ import (
 	"github.com/ethereum/go-ethereum/common"
 	ethtypes "github.com/ethereum/go-ethereum/core/types"
 
-	anteinterfaces "github.com/cosmos/evm/ante/interfaces"
-	antetypes "github.com/cosmos/evm/ante/types"
-	evmtypes "github.com/cosmos/evm/x/vm/types"
+	anteinterfaces "github.com/huyCuong73/mercury/ante/interfaces"
+	antetypes "github.com/huyCuong73/mercury/ante/types"
+	evmtypes "github.com/huyCuong73/mercury/x/vm/types"
 
 	errorsmod "cosmossdk.io/errors"
 

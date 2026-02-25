@@ -3,10 +3,10 @@ package ante
 import (
 	"fmt"
 
-	cosmosante "github.com/cosmos/evm/ante/cosmos"
-	"github.com/cosmos/evm/testutil"
-	"github.com/cosmos/evm/testutil/constants"
-	testutiltx "github.com/cosmos/evm/testutil/tx"
+	cosmosante "github.com/huyCuong73/mercury/ante/cosmos"
+	"github.com/huyCuong73/mercury/testutil"
+	"github.com/huyCuong73/mercury/testutil/constants"
+	testutiltx "github.com/huyCuong73/mercury/testutil/tx"
 
 	"cosmossdk.io/math"
 

@@ -12,10 +12,10 @@ import (
 	"github.com/ethereum/go-ethereum/crypto"
 	"go.opentelemetry.io/otel"
 
-	"github.com/cosmos/evm/crypto/hd"
-	"github.com/cosmos/evm/rpc/backend"
-	evmtrace "github.com/cosmos/evm/trace"
-	evmtypes "github.com/cosmos/evm/x/vm/types"
+	"github.com/huyCuong73/mercury/crypto/hd"
+	"github.com/huyCuong73/mercury/rpc/backend"
+	evmtrace "github.com/huyCuong73/mercury/trace"
+	evmtypes "github.com/huyCuong73/mercury/x/vm/types"
 
 	"cosmossdk.io/log"
 

@@ -1,9 +1,9 @@
 package vm
 
 import (
-	"github.com/cosmos/evm/testutil/integration/evm/network"
-	testkeyring "github.com/cosmos/evm/testutil/keyring"
-	evmtypes "github.com/cosmos/evm/x/vm/types"
+	"github.com/huyCuong73/mercury/testutil/integration/evm/network"
+	testkeyring "github.com/huyCuong73/mercury/testutil/keyring"
+	evmtypes "github.com/huyCuong73/mercury/x/vm/types"
 )
 
 func (s *KeeperTestSuite) TestEndBlock() {

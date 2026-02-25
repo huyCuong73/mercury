@@ -3,10 +3,10 @@ package grpc
 import (
 	"github.com/ethereum/go-ethereum/common"
 
-	basegrpc "github.com/cosmos/evm/testutil/integration/base/grpc"
-	"github.com/cosmos/evm/testutil/integration/evm/network"
-	feemarkettypes "github.com/cosmos/evm/x/feemarket/types"
-	evmtypes "github.com/cosmos/evm/x/vm/types"
+	basegrpc "github.com/huyCuong73/mercury/testutil/integration/base/grpc"
+	"github.com/huyCuong73/mercury/testutil/integration/evm/network"
+	feemarkettypes "github.com/huyCuong73/mercury/x/feemarket/types"
+	evmtypes "github.com/huyCuong73/mercury/x/vm/types"
 
 	sdk "github.com/cosmos/cosmos-sdk/types"
 	govtypes "github.com/cosmos/cosmos-sdk/x/gov/types/v1"

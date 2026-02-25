@@ -10,13 +10,13 @@ import (
 	"github.com/ethereum/go-ethereum/crypto"
 	"github.com/stretchr/testify/require"
 
-	"github.com/cosmos/evm/crypto/ethsecp256k1"
-	servercfg "github.com/cosmos/evm/server/config"
-	testKeyring "github.com/cosmos/evm/testutil/keyring"
-	utiltx "github.com/cosmos/evm/testutil/tx"
-	"github.com/cosmos/evm/x/vm/keeper/testdata"
-	"github.com/cosmos/evm/x/vm/statedb"
-	evmtypes "github.com/cosmos/evm/x/vm/types"
+	"github.com/huyCuong73/mercury/crypto/ethsecp256k1"
+	servercfg "github.com/huyCuong73/mercury/server/config"
+	testKeyring "github.com/huyCuong73/mercury/testutil/keyring"
+	utiltx "github.com/huyCuong73/mercury/testutil/tx"
+	"github.com/huyCuong73/mercury/x/vm/keeper/testdata"
+	"github.com/huyCuong73/mercury/x/vm/statedb"
+	evmtypes "github.com/huyCuong73/mercury/x/vm/types"
 
 	sdk "github.com/cosmos/cosmos-sdk/types"
 )

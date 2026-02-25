@@ -1,9 +1,9 @@
 package constants
 
 import (
-	"github.com/cosmos/evm/server/config"
-	erc20types "github.com/cosmos/evm/x/erc20/types"
-	evmtypes "github.com/cosmos/evm/x/vm/types"
+	"github.com/huyCuong73/mercury/server/config"
+	erc20types "github.com/huyCuong73/mercury/x/erc20/types"
+	evmtypes "github.com/huyCuong73/mercury/x/vm/types"
 
 	"cosmossdk.io/math"
 )

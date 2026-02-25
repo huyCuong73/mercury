@@ -5,8 +5,8 @@ import (
 
 	"github.com/ethereum/go-ethereum/common"
 
-	feemarkettypes "github.com/cosmos/evm/x/feemarket/types"
-	"github.com/cosmos/evm/x/vm/types"
+	feemarkettypes "github.com/huyCuong73/mercury/x/feemarket/types"
+	"github.com/huyCuong73/mercury/x/vm/types"
 )
 
 // TxConfig encapulates the readonly information of current tx for `StateDB`.

@@ -12,11 +12,11 @@ import (
 
 	cmttypes "github.com/cometbft/cometbft/types"
 
-	"github.com/cosmos/evm/mempool/miner"
-	"github.com/cosmos/evm/mempool/txpool"
-	"github.com/cosmos/evm/mempool/txpool/legacypool"
-	"github.com/cosmos/evm/rpc/stream"
-	evmtypes "github.com/cosmos/evm/x/vm/types"
+	"github.com/huyCuong73/mercury/mempool/miner"
+	"github.com/huyCuong73/mercury/mempool/txpool"
+	"github.com/huyCuong73/mercury/mempool/txpool/legacypool"
+	"github.com/huyCuong73/mercury/rpc/stream"
+	evmtypes "github.com/huyCuong73/mercury/x/vm/types"
 
 	"cosmossdk.io/log"
 	"cosmossdk.io/math"
@@ -139,7 +139,7 @@ func NewExperimentalEVMMempool(
 		panic("tx pool should contain only legacypool")
 	}
 
-	// TODO: move this logic to evmd.createMempoolConfig and set the max tx there
+	// TODO: move this logic to mercuryd.createMempoolConfig and set the max tx there
 	// Create Cosmos Mempool from configuration
 	cosmosPoolConfig := config.CosmosPoolConfig
 	if cosmosPoolConfig == nil {

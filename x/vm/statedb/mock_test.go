@@ -7,8 +7,8 @@ import (
 
 	"github.com/ethereum/go-ethereum/common"
 
-	"github.com/cosmos/evm/x/vm/statedb"
-	"github.com/cosmos/evm/x/vm/types"
+	"github.com/huyCuong73/mercury/x/vm/statedb"
+	"github.com/huyCuong73/mercury/x/vm/types"
 
 	storetypes "cosmossdk.io/store/types"
 

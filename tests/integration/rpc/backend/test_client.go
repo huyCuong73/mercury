@@ -18,9 +18,9 @@ import (
 	"github.com/cometbft/cometbft/types"
 	"github.com/cometbft/cometbft/version"
 
-	"github.com/cosmos/evm/rpc/backend/mocks"
-	rpc "github.com/cosmos/evm/rpc/types"
-	evmtypes "github.com/cosmos/evm/x/vm/types"
+	"github.com/huyCuong73/mercury/rpc/backend/mocks"
+	rpc "github.com/huyCuong73/mercury/rpc/types"
+	evmtypes "github.com/huyCuong73/mercury/x/vm/types"
 
 	"github.com/cosmos/cosmos-sdk/client"
 	codectypes "github.com/cosmos/cosmos-sdk/codec/types"

@@ -3,11 +3,11 @@ package encoding
 import (
 	"google.golang.org/protobuf/reflect/protoreflect"
 
-	evmaddress "github.com/cosmos/evm/encoding/address"
-	enccodec "github.com/cosmos/evm/encoding/codec"
-	"github.com/cosmos/evm/ethereum/eip712"
-	erc20types "github.com/cosmos/evm/x/erc20/types"
-	evmtypes "github.com/cosmos/evm/x/vm/types"
+	evmaddress "github.com/huyCuong73/mercury/encoding/address"
+	enccodec "github.com/huyCuong73/mercury/encoding/codec"
+	"github.com/huyCuong73/mercury/ethereum/eip712"
+	erc20types "github.com/huyCuong73/mercury/x/erc20/types"
+	evmtypes "github.com/huyCuong73/mercury/x/vm/types"
 	"github.com/cosmos/gogoproto/proto"
 
 	"cosmossdk.io/x/tx/signing"

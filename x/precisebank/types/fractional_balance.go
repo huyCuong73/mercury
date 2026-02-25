@@ -3,7 +3,7 @@ package types
 import (
 	"fmt"
 
-	evmtypes "github.com/cosmos/evm/x/vm/types"
+	evmtypes "github.com/huyCuong73/mercury/x/vm/types"
 
 	sdkmath "cosmossdk.io/math"
 

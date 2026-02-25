@@ -12,8 +12,8 @@ import (
 	"github.com/pkg/errors"
 	"github.com/spf13/cobra"
 
-	"github.com/cosmos/evm/utils"
-	"github.com/cosmos/evm/x/vm/types"
+	"github.com/huyCuong73/mercury/utils"
+	"github.com/huyCuong73/mercury/x/vm/types"
 
 	"cosmossdk.io/core/address"
 
@@ -139,7 +139,7 @@ may be used.
 Note, the '--from' flag is ignored as it is implied from [from_key_or_address].
 When using '--dry-run' a key name cannot be used, only an 0x or bech32 address.
 `,
-		Example: "evmd tx evm send 0x7cB61D4117AE31a12E393a1Cfa3BaC666481D02E 0xA2A8B87390F8F2D188242656BFb6852914073D06 10utoken",
+		Example: "mercuryd tx evm send 0x7cB61D4117AE31a12E393a1Cfa3BaC666481D02E 0xA2A8B87390F8F2D188242656BFb6852914073D06 10utoken",
 		Args:    cobra.ExactArgs(3),
 		RunE: func(cmd *cobra.Command, args []string) error {
 			fromAddr := args[0]

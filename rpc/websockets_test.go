@@ -10,8 +10,8 @@ import (
 	"github.com/gorilla/websocket"
 	"github.com/stretchr/testify/require"
 
-	"github.com/cosmos/evm/rpc/stream"
-	"github.com/cosmos/evm/server/config"
+	"github.com/huyCuong73/mercury/rpc/stream"
+	"github.com/huyCuong73/mercury/server/config"
 
 	"cosmossdk.io/log"
 

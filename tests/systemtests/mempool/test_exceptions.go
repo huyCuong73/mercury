@@ -6,7 +6,7 @@ import (
 	"fmt"
 	"testing"
 
-	"github.com/cosmos/evm/tests/systemtests/suite"
+	"github.com/huyCuong73/mercury/tests/systemtests/suite"
 	"github.com/test-go/testify/require"
 )
 

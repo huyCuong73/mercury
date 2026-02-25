@@ -13,7 +13,7 @@ import (
 	//nolint:revive // dot imports are fine for Ginkgo
 	. "github.com/onsi/gomega"
 
-	suite "github.com/cosmos/evm/tests/systemtests/suite"
+	suite "github.com/huyCuong73/mercury/tests/systemtests/suite"
 )
 
 func RunEIP7702(t *testing.T, base *suite.BaseTestSuite) {

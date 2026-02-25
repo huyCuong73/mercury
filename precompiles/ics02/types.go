@@ -5,7 +5,7 @@ import (
 
 	"github.com/ethereum/go-ethereum/accounts/abi"
 
-	cmn "github.com/cosmos/evm/precompiles/common"
+	cmn "github.com/huyCuong73/mercury/precompiles/common"
 	clienttypes "github.com/cosmos/ibc-go/v10/modules/core/02-client/types"
 )
 

@@ -3,10 +3,10 @@ package erc20
 import (
 	"github.com/stretchr/testify/suite"
 
-	"github.com/cosmos/evm/testutil/integration/evm/network"
-	utiltx "github.com/cosmos/evm/testutil/tx"
-	"github.com/cosmos/evm/x/erc20"
-	"github.com/cosmos/evm/x/erc20/types"
+	"github.com/huyCuong73/mercury/testutil/integration/evm/network"
+	utiltx "github.com/huyCuong73/mercury/testutil/tx"
+	"github.com/huyCuong73/mercury/x/erc20"
+	"github.com/huyCuong73/mercury/x/erc20/types"
 	transfertypes "github.com/cosmos/ibc-go/v10/modules/apps/transfer/types"
 
 	"cosmossdk.io/math"

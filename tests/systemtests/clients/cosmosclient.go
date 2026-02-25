@@ -10,7 +10,7 @@ import (
 
 	"github.com/ethereum/go-ethereum/crypto"
 
-	"github.com/cosmos/evm/crypto/ethsecp256k1"
+	"github.com/huyCuong73/mercury/crypto/ethsecp256k1"
 
 	rpchttp "github.com/cometbft/cometbft/rpc/client/http"
 	coretypes "github.com/cometbft/cometbft/rpc/core/types"
@@ -27,7 +27,7 @@ import (
 	authtypes "github.com/cosmos/cosmos-sdk/x/auth/types"
 	banktypes "github.com/cosmos/cosmos-sdk/x/bank/types"
 
-	evmencoding "github.com/cosmos/evm/encoding"
+	evmencoding "github.com/huyCuong73/mercury/encoding"
 )
 
 // CosmosClient is a client for interacting with Cosmos SDK-based nodes.

@@ -3,8 +3,8 @@ package keeper
 import (
 	"github.com/ethereum/go-ethereum/common"
 
-	types2 "github.com/cosmos/evm/x/erc20/types"
-	"github.com/cosmos/evm/x/vm/types"
+	types2 "github.com/huyCuong73/mercury/x/erc20/types"
+	"github.com/huyCuong73/mercury/x/vm/types"
 
 	"cosmossdk.io/errors"
 )

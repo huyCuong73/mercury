@@ -6,8 +6,8 @@ import (
 
 	"github.com/ethereum/go-ethereum/core/vm"
 
-	"github.com/cosmos/evm/x/precisebank/types"
-	evmtypes "github.com/cosmos/evm/x/vm/types"
+	"github.com/huyCuong73/mercury/x/precisebank/types"
+	evmtypes "github.com/huyCuong73/mercury/x/vm/types"
 
 	"cosmossdk.io/math"
 

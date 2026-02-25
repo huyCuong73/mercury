@@ -11,7 +11,7 @@ import (
 
 	"github.com/test-go/testify/require"
 
-	"github.com/cosmos/evm/tests/systemtests/suite"
+	"github.com/huyCuong73/mercury/tests/systemtests/suite"
 )
 
 // RunTxBroadcasting tests transaction broadcasting and duplicate handling in a multi-node network.

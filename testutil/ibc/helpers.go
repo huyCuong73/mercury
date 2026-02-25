@@ -10,7 +10,7 @@ import (
 
 	abci "github.com/cometbft/cometbft/abci/types"
 
-	"github.com/cosmos/evm/x/vm/types"
+	"github.com/huyCuong73/mercury/x/vm/types"
 
 	bam "github.com/cosmos/cosmos-sdk/baseapp"
 	"github.com/cosmos/cosmos-sdk/client"

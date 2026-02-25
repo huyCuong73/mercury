@@ -11,14 +11,14 @@ import (
 	"github.com/ethereum/go-ethereum/params"
 	"github.com/stretchr/testify/require"
 
-	cryptocodec "github.com/cosmos/evm/crypto/codec"
-	"github.com/cosmos/evm/crypto/ethsecp256k1"
-	"github.com/cosmos/evm/crypto/hd"
-	"github.com/cosmos/evm/rpc/types"
-	"github.com/cosmos/evm/testutil/constants"
-	"github.com/cosmos/evm/utils"
-	feemarkettypes "github.com/cosmos/evm/x/feemarket/types"
-	evmtypes "github.com/cosmos/evm/x/vm/types"
+	cryptocodec "github.com/huyCuong73/mercury/crypto/codec"
+	"github.com/huyCuong73/mercury/crypto/ethsecp256k1"
+	"github.com/huyCuong73/mercury/crypto/hd"
+	"github.com/huyCuong73/mercury/rpc/types"
+	"github.com/huyCuong73/mercury/testutil/constants"
+	"github.com/huyCuong73/mercury/utils"
+	feemarkettypes "github.com/huyCuong73/mercury/x/feemarket/types"
+	evmtypes "github.com/huyCuong73/mercury/x/vm/types"
 
 	sdkmath "cosmossdk.io/math"
 

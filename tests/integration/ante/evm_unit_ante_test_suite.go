@@ -3,8 +3,8 @@ package ante
 import (
 	"github.com/stretchr/testify/suite"
 
-	"github.com/cosmos/evm/testutil/constants"
-	"github.com/cosmos/evm/testutil/integration/evm/network"
+	"github.com/huyCuong73/mercury/testutil/constants"
+	"github.com/huyCuong73/mercury/testutil/integration/evm/network"
 )
 
 // EvmUniAnteTestSuite aims to test all EVM ante handler unit functions.

@@ -1,5 +1,5 @@
 {
-  "name": "cosmos-evm-contracts",
+  "name": "mercury-contracts",
   "version": "2.0.0",
   "description": "A collection of smart contracts used in the development of the Cosmos EVM blockchain.",
   "devDependencies": {

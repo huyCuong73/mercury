@@ -1,8 +1,8 @@
 package runner
 
 import (
-	"github.com/cosmos/evm/tests/jsonrpc/simulator/types"
-	"github.com/cosmos/evm/tests/jsonrpc/simulator/utils"
+	"github.com/huyCuong73/mercury/tests/jsonrpc/simulator/types"
+	"github.com/huyCuong73/mercury/tests/jsonrpc/simulator/utils"
 )
 
 // ExecuteAllTests runs all RPC tests and returns the results

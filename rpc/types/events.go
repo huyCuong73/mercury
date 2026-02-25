@@ -9,8 +9,8 @@ import (
 	abci "github.com/cometbft/cometbft/abci/types"
 	cmtrpctypes "github.com/cometbft/cometbft/rpc/core/types"
 
-	"github.com/cosmos/evm/server/types"
-	evmtypes "github.com/cosmos/evm/x/vm/types"
+	"github.com/huyCuong73/mercury/server/types"
+	evmtypes "github.com/huyCuong73/mercury/x/vm/types"
 
 	sdk "github.com/cosmos/cosmos-sdk/types"
 )

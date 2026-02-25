@@ -3,9 +3,9 @@ package bech32
 import (
 	"github.com/stretchr/testify/suite"
 
-	"github.com/cosmos/evm/precompiles/bech32"
-	"github.com/cosmos/evm/testutil/integration/evm/network"
-	testkeyring "github.com/cosmos/evm/testutil/keyring"
+	"github.com/huyCuong73/mercury/precompiles/bech32"
+	"github.com/huyCuong73/mercury/testutil/integration/evm/network"
+	testkeyring "github.com/huyCuong73/mercury/testutil/keyring"
 )
 
 // PrecompileTestSuite is the implementation of the TestSuite interface for ERC20 precompile

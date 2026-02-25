@@ -5,7 +5,7 @@ import (
 
 	"github.com/ethereum/go-ethereum/common"
 
-	"github.com/cosmos/evm/utils"
+	"github.com/huyCuong73/mercury/utils"
 
 	"cosmossdk.io/core/address"
 

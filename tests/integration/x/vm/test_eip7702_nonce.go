@@ -7,10 +7,10 @@ import (
 	ethtypes "github.com/ethereum/go-ethereum/core/types"
 	"github.com/holiman/uint256"
 
-	testKeyring "github.com/cosmos/evm/testutil/keyring"
-	testutiltypes "github.com/cosmos/evm/testutil/types"
-	"github.com/cosmos/evm/x/vm/keeper/testdata"
-	evmtypes "github.com/cosmos/evm/x/vm/types"
+	testKeyring "github.com/huyCuong73/mercury/testutil/keyring"
+	testutiltypes "github.com/huyCuong73/mercury/testutil/types"
+	"github.com/huyCuong73/mercury/x/vm/keeper/testdata"
+	evmtypes "github.com/huyCuong73/mercury/x/vm/types"
 )
 
 // TestEIP7702NonceIncrement tests that when a user with EIP-7702 delegation

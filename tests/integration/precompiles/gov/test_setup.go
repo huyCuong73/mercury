@@ -5,13 +5,13 @@ import (
 
 	"github.com/stretchr/testify/suite"
 
-	evmaddress "github.com/cosmos/evm/encoding/address"
-	"github.com/cosmos/evm/precompiles/gov"
-	testconstants "github.com/cosmos/evm/testutil/constants"
-	"github.com/cosmos/evm/testutil/integration/evm/factory"
-	"github.com/cosmos/evm/testutil/integration/evm/grpc"
-	"github.com/cosmos/evm/testutil/integration/evm/network"
-	testkeyring "github.com/cosmos/evm/testutil/keyring"
+	evmaddress "github.com/huyCuong73/mercury/encoding/address"
+	"github.com/huyCuong73/mercury/precompiles/gov"
+	testconstants "github.com/huyCuong73/mercury/testutil/constants"
+	"github.com/huyCuong73/mercury/testutil/integration/evm/factory"
+	"github.com/huyCuong73/mercury/testutil/integration/evm/grpc"
+	"github.com/huyCuong73/mercury/testutil/integration/evm/network"
+	testkeyring "github.com/huyCuong73/mercury/testutil/keyring"
 
 	"cosmossdk.io/math"
 

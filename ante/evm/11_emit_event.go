@@ -3,7 +3,7 @@ package evm
 import (
 	"strconv"
 
-	evmtypes "github.com/cosmos/evm/x/vm/types"
+	evmtypes "github.com/huyCuong73/mercury/x/vm/types"
 
 	sdk "github.com/cosmos/cosmos-sdk/types"
 )

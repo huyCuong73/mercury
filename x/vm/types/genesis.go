@@ -3,7 +3,7 @@ package types
 import (
 	"fmt"
 
-	"github.com/cosmos/evm/utils"
+	"github.com/huyCuong73/mercury/utils"
 )
 
 // Validate performs a basic validation of a GenesisAccount fields.

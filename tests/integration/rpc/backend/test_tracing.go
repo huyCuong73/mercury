@@ -12,11 +12,11 @@ import (
 	"github.com/cometbft/cometbft/types"
 
 	dbm "github.com/cosmos/cosmos-db"
-	"github.com/cosmos/evm/crypto/ethsecp256k1"
-	"github.com/cosmos/evm/indexer"
-	"github.com/cosmos/evm/rpc/backend/mocks"
-	rpctypes "github.com/cosmos/evm/rpc/types"
-	evmtypes "github.com/cosmos/evm/x/vm/types"
+	"github.com/huyCuong73/mercury/crypto/ethsecp256k1"
+	"github.com/huyCuong73/mercury/indexer"
+	"github.com/huyCuong73/mercury/rpc/backend/mocks"
+	rpctypes "github.com/huyCuong73/mercury/rpc/types"
+	evmtypes "github.com/huyCuong73/mercury/x/vm/types"
 
 	"cosmossdk.io/log"
 

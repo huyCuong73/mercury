@@ -22,7 +22,7 @@ import (
 	types1 "github.com/cosmos/cosmos-sdk/x/bank/types"
 	types2 "github.com/cosmos/cosmos-sdk/x/consensus/types"
 	types3 "github.com/cosmos/cosmos-sdk/x/staking/types"
-	types4 "github.com/cosmos/evm/x/feemarket/types"
+	types4 "github.com/huyCuong73/mercury/x/feemarket/types"
 	common "github.com/ethereum/go-ethereum/common"
 	core "github.com/ethereum/go-ethereum/core"
 	types5 "github.com/ethereum/go-ethereum/core/types"

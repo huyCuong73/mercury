@@ -6,9 +6,9 @@ import (
 	"github.com/ethereum/go-ethereum/crypto"
 	"github.com/holiman/uint256"
 
-	cmn "github.com/cosmos/evm/precompiles/common"
-	"github.com/cosmos/evm/precompiles/slashing"
-	"github.com/cosmos/evm/x/vm/statedb"
+	cmn "github.com/huyCuong73/mercury/precompiles/common"
+	"github.com/huyCuong73/mercury/precompiles/slashing"
+	"github.com/huyCuong73/mercury/x/vm/statedb"
 
 	storetypes "cosmossdk.io/store/types"
 

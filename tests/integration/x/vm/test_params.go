@@ -1,8 +1,8 @@
 package vm
 
 import (
-	"github.com/cosmos/evm/testutil/config"
-	"github.com/cosmos/evm/x/vm/types"
+	"github.com/huyCuong73/mercury/testutil/config"
+	"github.com/huyCuong73/mercury/x/vm/types"
 )
 
 func (s *KeeperTestSuite) TestParams() {

@@ -5,8 +5,8 @@ import (
 	"github.com/ethereum/go-ethereum/common"
 	"github.com/ethereum/go-ethereum/crypto"
 
-	"github.com/cosmos/evm/wallets/accounts"
-	"github.com/cosmos/evm/wallets/ledger"
+	"github.com/huyCuong73/mercury/wallets/accounts"
+	"github.com/huyCuong73/mercury/wallets/ledger"
 
 	sdk "github.com/cosmos/cosmos-sdk/types"
 	signingtypes "github.com/cosmos/cosmos-sdk/types/tx/signing"

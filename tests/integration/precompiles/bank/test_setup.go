@@ -4,12 +4,12 @@ import (
 	"github.com/ethereum/go-ethereum/common"
 	"github.com/stretchr/testify/suite"
 
-	bank2 "github.com/cosmos/evm/precompiles/bank"
-	"github.com/cosmos/evm/testutil/integration/evm/factory"
-	"github.com/cosmos/evm/testutil/integration/evm/grpc"
-	"github.com/cosmos/evm/testutil/integration/evm/network"
-	"github.com/cosmos/evm/testutil/integration/evm/utils"
-	testkeyring "github.com/cosmos/evm/testutil/keyring"
+	bank2 "github.com/huyCuong73/mercury/precompiles/bank"
+	"github.com/huyCuong73/mercury/testutil/integration/evm/factory"
+	"github.com/huyCuong73/mercury/testutil/integration/evm/grpc"
+	"github.com/huyCuong73/mercury/testutil/integration/evm/network"
+	"github.com/huyCuong73/mercury/testutil/integration/evm/utils"
+	testkeyring "github.com/huyCuong73/mercury/testutil/keyring"
 
 	"cosmossdk.io/math"
 

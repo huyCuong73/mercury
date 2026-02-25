@@ -1,9 +1,9 @@
 package runner
 
 import (
-	ns "github.com/cosmos/evm/tests/jsonrpc/simulator/namespaces"
-	"github.com/cosmos/evm/tests/jsonrpc/simulator/types"
-	"github.com/cosmos/evm/tests/jsonrpc/simulator/utils"
+	ns "github.com/huyCuong73/mercury/tests/jsonrpc/simulator/namespaces"
+	"github.com/huyCuong73/mercury/tests/jsonrpc/simulator/types"
+	"github.com/huyCuong73/mercury/tests/jsonrpc/simulator/utils"
 )
 
 // GetTestCase returns the comprehensive test configuration organized by namespace

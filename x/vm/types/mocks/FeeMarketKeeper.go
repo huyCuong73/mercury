@@ -4,7 +4,7 @@ package mocks
 
 import (
 	math "cosmossdk.io/math"
-	feemarkettypes "github.com/cosmos/evm/x/feemarket/types"
+	feemarkettypes "github.com/huyCuong73/mercury/x/feemarket/types"
 
 	mock "github.com/stretchr/testify/mock"
 

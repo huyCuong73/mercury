@@ -1,7 +1,7 @@
 package evm
 
 import (
-	evmante "github.com/cosmos/evm/x/vm/ante"
+	evmante "github.com/huyCuong73/mercury/x/vm/ante"
 
 	errorsmod "cosmossdk.io/errors"
 	storetypes "cosmossdk.io/store/types"

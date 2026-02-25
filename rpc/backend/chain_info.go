@@ -19,10 +19,10 @@ import (
 	cmtrpcclient "github.com/cometbft/cometbft/rpc/client"
 	cmtrpctypes "github.com/cometbft/cometbft/rpc/core/types"
 
-	rpctypes "github.com/cosmos/evm/rpc/types"
-	evmtrace "github.com/cosmos/evm/trace"
-	feemarkettypes "github.com/cosmos/evm/x/feemarket/types"
-	evmtypes "github.com/cosmos/evm/x/vm/types"
+	rpctypes "github.com/huyCuong73/mercury/rpc/types"
+	evmtrace "github.com/huyCuong73/mercury/trace"
+	feemarkettypes "github.com/huyCuong73/mercury/x/feemarket/types"
+	evmtypes "github.com/huyCuong73/mercury/x/vm/types"
 
 	errorsmod "cosmossdk.io/errors"
 	sdkmath "cosmossdk.io/math"

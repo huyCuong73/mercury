@@ -13,14 +13,14 @@ import (
 	//nolint:revive // dot imports are fine for Ginkgo
 	. "github.com/onsi/gomega"
 
-	"github.com/cosmos/evm"
-	"github.com/cosmos/evm/precompiles/ics20"
-	"github.com/cosmos/evm/precompiles/testutil/contracts"
-	evmibctesting "github.com/cosmos/evm/testutil/ibc"
-	"github.com/cosmos/evm/testutil/integration/evm/factory"
-	"github.com/cosmos/evm/testutil/tx"
-	testutiltypes "github.com/cosmos/evm/testutil/types"
-	evmtypes "github.com/cosmos/evm/x/vm/types"
+	"github.com/huyCuong73/mercury"
+	"github.com/huyCuong73/mercury/precompiles/ics20"
+	"github.com/huyCuong73/mercury/precompiles/testutil/contracts"
+	evmibctesting "github.com/huyCuong73/mercury/testutil/ibc"
+	"github.com/huyCuong73/mercury/testutil/integration/evm/factory"
+	"github.com/huyCuong73/mercury/testutil/tx"
+	testutiltypes "github.com/huyCuong73/mercury/testutil/types"
+	evmtypes "github.com/huyCuong73/mercury/x/vm/types"
 	"github.com/cosmos/ibc-go/v10/modules/apps/transfer/types"
 	ibctesting "github.com/cosmos/ibc-go/v10/testing"
 

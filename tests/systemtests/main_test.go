@@ -3,13 +3,13 @@
 package systemtests
 
 import (
-	"github.com/cosmos/evm/tests/systemtests/accountabstraction"
-	"github.com/cosmos/evm/tests/systemtests/chainupgrade"
-	"github.com/cosmos/evm/tests/systemtests/eip712"
+	"github.com/huyCuong73/mercury/tests/systemtests/accountabstraction"
+	"github.com/huyCuong73/mercury/tests/systemtests/chainupgrade"
+	"github.com/huyCuong73/mercury/tests/systemtests/eip712"
 	"testing"
 
-	"github.com/cosmos/evm/tests/systemtests/mempool"
-	"github.com/cosmos/evm/tests/systemtests/suite"
+	"github.com/huyCuong73/mercury/tests/systemtests/mempool"
+	"github.com/huyCuong73/mercury/tests/systemtests/suite"
 
 	"cosmossdk.io/systemtests"
 )

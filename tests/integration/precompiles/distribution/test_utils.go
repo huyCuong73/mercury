@@ -1,9 +1,9 @@
 package distribution
 
 import (
-	evmaddress "github.com/cosmos/evm/encoding/address"
-	"github.com/cosmos/evm/precompiles/staking"
-	"github.com/cosmos/evm/testutil/keyring"
+	evmaddress "github.com/huyCuong73/mercury/encoding/address"
+	"github.com/huyCuong73/mercury/precompiles/staking"
+	"github.com/huyCuong73/mercury/testutil/keyring"
 
 	"cosmossdk.io/math"
 

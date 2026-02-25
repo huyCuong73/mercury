@@ -10,13 +10,13 @@ import (
 	"github.com/ethereum/go-ethereum/core/vm"
 	"github.com/holiman/uint256"
 
-	"github.com/cosmos/evm/precompiles/staking"
-	"github.com/cosmos/evm/precompiles/testutil"
-	chainutil "github.com/cosmos/evm/testutil"
-	testconstants "github.com/cosmos/evm/testutil/constants"
-	"github.com/cosmos/evm/testutil/keyring"
-	"github.com/cosmos/evm/x/vm/statedb"
-	evmtypes "github.com/cosmos/evm/x/vm/types"
+	"github.com/huyCuong73/mercury/precompiles/staking"
+	"github.com/huyCuong73/mercury/precompiles/testutil"
+	chainutil "github.com/huyCuong73/mercury/testutil"
+	testconstants "github.com/huyCuong73/mercury/testutil/constants"
+	"github.com/huyCuong73/mercury/testutil/keyring"
+	"github.com/huyCuong73/mercury/x/vm/statedb"
+	evmtypes "github.com/huyCuong73/mercury/x/vm/types"
 
 	"cosmossdk.io/math"
 

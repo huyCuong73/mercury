@@ -15,9 +15,9 @@ import (
 
 	coretypes "github.com/cometbft/cometbft/rpc/core/types"
 
-	"github.com/cosmos/evm/rpc/stream"
-	"github.com/cosmos/evm/rpc/types"
-	evmtrace "github.com/cosmos/evm/trace"
+	"github.com/huyCuong73/mercury/rpc/stream"
+	"github.com/huyCuong73/mercury/rpc/types"
+	evmtrace "github.com/huyCuong73/mercury/trace"
 
 	"cosmossdk.io/log"
 

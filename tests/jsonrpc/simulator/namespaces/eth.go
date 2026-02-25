@@ -20,9 +20,9 @@ import (
 	"github.com/gorilla/websocket"
 	"github.com/status-im/keycard-go/hexutils"
 
-	"github.com/cosmos/evm/tests/jsonrpc/simulator/contracts"
-	"github.com/cosmos/evm/tests/jsonrpc/simulator/types"
-	"github.com/cosmos/evm/tests/jsonrpc/simulator/utils"
+	"github.com/huyCuong73/mercury/tests/jsonrpc/simulator/contracts"
+	"github.com/huyCuong73/mercury/tests/jsonrpc/simulator/types"
+	"github.com/huyCuong73/mercury/tests/jsonrpc/simulator/utils"
 )
 
 const (
@@ -733,7 +733,7 @@ func EthGetTransactionByBlockHashAndIndex(rCtx *types.RPCContext) (*types.RpcRes
 				return []interface{}{receipt.BlockHash.Hex(), fmt.Sprintf("0x%x", receipt.TransactionIndex)}
 			}
 		} else if len(rCtx.Evmd.ProcessedTransactions) > 0 {
-			// Get evmd transaction receipt to get block hash and index
+			// Get mercuryd transaction receipt to get block hash and index
 			if receipt, err := rCtx.Evmd.TransactionReceipt(context.Background(), rCtx.Evmd.ProcessedTransactions[0]); err == nil {
 				return []interface{}{receipt.BlockHash.Hex(), fmt.Sprintf("0x%x", receipt.TransactionIndex)}
 			}

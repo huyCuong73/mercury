@@ -12,11 +12,11 @@ import (
 
 	cmtproto "github.com/cometbft/cometbft/proto/tendermint/types"
 
-	"github.com/cosmos/evm/mempool"
-	"github.com/cosmos/evm/mempool/mocks"
-	"github.com/cosmos/evm/testutil/constants"
-	"github.com/cosmos/evm/x/vm/statedb"
-	vmtypes "github.com/cosmos/evm/x/vm/types"
+	"github.com/huyCuong73/mercury/mempool"
+	"github.com/huyCuong73/mercury/mempool/mocks"
+	"github.com/huyCuong73/mercury/testutil/constants"
+	"github.com/huyCuong73/mercury/x/vm/statedb"
+	vmtypes "github.com/huyCuong73/mercury/x/vm/types"
 
 	"cosmossdk.io/log"
 	storetypes "cosmossdk.io/store/types"

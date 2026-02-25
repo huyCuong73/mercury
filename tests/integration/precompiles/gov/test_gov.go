@@ -9,10 +9,10 @@ import (
 	"github.com/ethereum/go-ethereum/core/vm"
 	"github.com/holiman/uint256"
 
-	"github.com/cosmos/evm/precompiles/gov"
-	"github.com/cosmos/evm/testutil"
-	"github.com/cosmos/evm/x/vm/statedb"
-	evmtypes "github.com/cosmos/evm/x/vm/types"
+	"github.com/huyCuong73/mercury/precompiles/gov"
+	"github.com/huyCuong73/mercury/testutil"
+	"github.com/huyCuong73/mercury/x/vm/statedb"
+	evmtypes "github.com/huyCuong73/mercury/x/vm/types"
 )
 
 func (s *PrecompileTestSuite) TestIsTransaction() {

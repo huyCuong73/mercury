@@ -5,12 +5,12 @@ import (
 
 	"github.com/stretchr/testify/require"
 
-	evmencoding "github.com/cosmos/evm/encoding"
-	testconstants "github.com/cosmos/evm/testutil/constants"
-	"github.com/cosmos/evm/x/precisebank/keeper"
-	"github.com/cosmos/evm/x/precisebank/types"
-	"github.com/cosmos/evm/x/precisebank/types/mocks"
-	vmtypes "github.com/cosmos/evm/x/vm/types"
+	evmencoding "github.com/huyCuong73/mercury/encoding"
+	testconstants "github.com/huyCuong73/mercury/testutil/constants"
+	"github.com/huyCuong73/mercury/x/precisebank/keeper"
+	"github.com/huyCuong73/mercury/x/precisebank/types"
+	"github.com/huyCuong73/mercury/x/precisebank/types/mocks"
+	vmtypes "github.com/huyCuong73/mercury/x/vm/types"
 
 	sdkmath "cosmossdk.io/math"
 	storetypes "cosmossdk.io/store/types"

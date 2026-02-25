@@ -8,7 +8,7 @@ import (
 
 	"github.com/stretchr/testify/require"
 
-	evmante "github.com/cosmos/evm/ante/evm"
+	evmante "github.com/huyCuong73/mercury/ante/evm"
 
 	addresscodec "cosmossdk.io/core/address"
 
