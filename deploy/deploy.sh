@@ -89,7 +89,7 @@ remote_scp() {
 
 remote_cmd() {
   local ip="$1"; shift
-  ssh $SSH_OPTS "${SSH_USER}@${ip}" "$@"
+  ssh $SSH_OPTS "${SSH_USER}@${ip}" "export PATH=\$PATH:\$HOME/go/bin:/usr/local/go/bin; $@"
 }
 
 remote_fetch() {
