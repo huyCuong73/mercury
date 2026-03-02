@@ -172,6 +172,11 @@ phase_genesis() {
     return
   fi
 
+  # --- Reset genesis to clean state (allows re-running this phase) ---
+  echo "🔄 Resetting genesis to clean state..."
+  rm -rf "$CHAIN_HOME/config/gentx"
+  mercuryd init "$MY_MONIKER" --chain-id "$CHAIN_ID" --home "$CHAIN_HOME" -o 2>/dev/null
+
   # --- Collect addresses from all nodes ---
   echo "📡 Collecting addresses from all nodes..."
   declare -A NODE_ADDRS
@@ -401,6 +406,7 @@ Wants=network-online.target
 
 [Service]
 User=$USER
+WorkingDirectory=$CHAIN_HOME
 ExecStart=$MERCURYD_PATH start \\
     --pruning nothing \\
     --log_level info \\
