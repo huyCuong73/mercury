@@ -208,22 +208,22 @@ phase_genesis() {
   echo "📝 Configuring genesis..."
 
   # Token denomination
-  jq '.app_state["staking"]["params"]["bond_denom"]="amercury"' "$GENESIS" >"$TMP_GENESIS" && mv "$TMP_GENESIS" "$GENESIS"
-  jq '.app_state["gov"]["deposit_params"]["min_deposit"][0]["denom"]="amercury"' "$GENESIS" >"$TMP_GENESIS" && mv "$TMP_GENESIS" "$GENESIS"
-  jq '.app_state["gov"]["params"]["min_deposit"][0]["denom"]="amercury"' "$GENESIS" >"$TMP_GENESIS" && mv "$TMP_GENESIS" "$GENESIS"
-  jq '.app_state["gov"]["params"]["expedited_min_deposit"][0]["denom"]="amercury"' "$GENESIS" >"$TMP_GENESIS" && mv "$TMP_GENESIS" "$GENESIS"
-  jq '.app_state["evm"]["params"]["evm_denom"]="amercury"' "$GENESIS" >"$TMP_GENESIS" && mv "$TMP_GENESIS" "$GENESIS"
-  jq '.app_state["mint"]["params"]["mint_denom"]="amercury"' "$GENESIS" >"$TMP_GENESIS" && mv "$TMP_GENESIS" "$GENESIS"
+  jq '.app_state["staking"]["params"]["bond_denom"]="aplab"' "$GENESIS" >"$TMP_GENESIS" && mv "$TMP_GENESIS" "$GENESIS"
+  jq '.app_state["gov"]["deposit_params"]["min_deposit"][0]["denom"]="aplab"' "$GENESIS" >"$TMP_GENESIS" && mv "$TMP_GENESIS" "$GENESIS"
+  jq '.app_state["gov"]["params"]["min_deposit"][0]["denom"]="aplab"' "$GENESIS" >"$TMP_GENESIS" && mv "$TMP_GENESIS" "$GENESIS"
+  jq '.app_state["gov"]["params"]["expedited_min_deposit"][0]["denom"]="aplab"' "$GENESIS" >"$TMP_GENESIS" && mv "$TMP_GENESIS" "$GENESIS"
+  jq '.app_state["evm"]["params"]["evm_denom"]="aplab"' "$GENESIS" >"$TMP_GENESIS" && mv "$TMP_GENESIS" "$GENESIS"
+  jq '.app_state["mint"]["params"]["mint_denom"]="aplab"' "$GENESIS" >"$TMP_GENESIS" && mv "$TMP_GENESIS" "$GENESIS"
 
   # Token metadata
-  jq '.app_state["bank"]["denom_metadata"]=[{"description":"The native staking token for mercuryd.","denom_units":[{"denom":"amercury","exponent":0,"aliases":["attomercury"]},{"denom":"mercury","exponent":18,"aliases":[]}],"base":"amercury","display":"mercury","name":"Mercury","symbol":"MERC","uri":"","uri_hash":""}]' "$GENESIS" >"$TMP_GENESIS" && mv "$TMP_GENESIS" "$GENESIS"
+  jq '.app_state["bank"]["denom_metadata"]=[{"description":"The native staking token for PBlockchainLab Testnet.","denom_units":[{"denom":"aplab","exponent":0,"aliases":["attoplab"]},{"denom":"plab","exponent":18,"aliases":[]}],"base":"aplab","display":"plab","name":"PBlockchainLab Testnet","symbol":"PLAB","uri":"","uri_hash":""}]' "$GENESIS" >"$TMP_GENESIS" && mv "$TMP_GENESIS" "$GENESIS"
 
   # EVM precompiles
   jq '.app_state["evm"]["params"]["active_static_precompiles"]=["0x0000000000000000000000000000000000000100","0x0000000000000000000000000000000000000400","0x0000000000000000000000000000000000000800","0x0000000000000000000000000000000000000801","0x0000000000000000000000000000000000000802","0x0000000000000000000000000000000000000803","0x0000000000000000000000000000000000000804","0x0000000000000000000000000000000000000805","0x0000000000000000000000000000000000000806","0x0000000000000000000000000000000000000807"]' "$GENESIS" >"$TMP_GENESIS" && mv "$TMP_GENESIS" "$GENESIS"
 
   # ERC20
   jq '.app_state.erc20.native_precompiles=["0xEeeeeEeeeEeEeeEeEeEeeEEEeeeeEeeeeeeeEEeE"]' "$GENESIS" >"$TMP_GENESIS" && mv "$TMP_GENESIS" "$GENESIS"
-  jq '.app_state.erc20.token_pairs=[{contract_owner:1,erc20_address:"0xEeeeeEeeeEeEeeEeEeEeeEEEeeeeEeeeeeeeEEeE",denom:"amercury",enabled:true}]' "$GENESIS" >"$TMP_GENESIS" && mv "$TMP_GENESIS" "$GENESIS"
+  jq '.app_state.erc20.token_pairs=[{contract_owner:1,erc20_address:"0xEeeeeEeeeEeEeeEeEeEeeEEEeeeeEeeeeeeeEEeE",denom:"aplab",enabled:true}]' "$GENESIS" >"$TMP_GENESIS" && mv "$TMP_GENESIS" "$GENESIS"
 
   # Block gas limit
   jq '.consensus.params.block.max_gas="10000000"' "$GENESIS" >"$TMP_GENESIS" && mv "$TMP_GENESIS" "$GENESIS"
@@ -239,10 +239,10 @@ phase_genesis() {
   echo "💰 Funding all validators..."
   for i in $(seq 1 $NODE_COUNT); do
     if [ "$i" -eq 1 ]; then
-      mercuryd genesis add-genesis-account "$MY_KEYNAME" 100000000000000000000000000amercury \
+      mercuryd genesis add-genesis-account "$MY_KEYNAME" 100000000000000000000000000aplab \
         --keyring-backend "$KEYRING" --home "$CHAIN_HOME"
     else
-      mercuryd genesis add-genesis-account "${NODE_ADDRS[$i]}" 100000000000000000000000000amercury \
+      mercuryd genesis add-genesis-account "${NODE_ADDRS[$i]}" 100000000000000000000000000aplab \
         --home "$CHAIN_HOME"
     fi
     echo "   ✅ Funded node $i: ${NODE_ADDRS[$i]}"
@@ -250,8 +250,8 @@ phase_genesis() {
 
   # --- Create gentx for node 1 ---
   echo "📝 Creating gentx for node 1..."
-  mercuryd genesis gentx "$MY_KEYNAME" 1000000000000000000000amercury \
-    --gas-prices ${BASEFEE}amercury \
+  mercuryd genesis gentx "$MY_KEYNAME" 1000000000000000000000aplab \
+    --gas-prices ${BASEFEE}aplab \
     --keyring-backend "$KEYRING" \
     --chain-id "$CHAIN_ID" \
     --home "$CHAIN_HOME"
@@ -271,8 +271,8 @@ phase_genesis() {
     # Create gentx on remote
     echo "     📝 Creating gentx..."
     remote_cmd "$ip" "cd $CHAIN_HOME && \
-      mercuryd genesis gentx validator${i} 1000000000000000000000amercury \
-        --gas-prices ${BASEFEE}amercury \
+      mercuryd genesis gentx validator${i} 1000000000000000000000aplab \
+        --gas-prices ${BASEFEE}aplab \
         --keyring-backend $KEYRING \
         --chain-id $CHAIN_ID \
         --home $CHAIN_HOME"
@@ -410,7 +410,7 @@ WorkingDirectory=$CHAIN_HOME
 ExecStart=$MERCURYD_PATH start \\
     --pruning nothing \\
     --log_level info \\
-    --minimum-gas-prices=0amercury \\
+    --minimum-gas-prices=0aplab \\
     --evm.min-tip=0 \\
     --home $CHAIN_HOME \\
     --json-rpc.api eth,txpool,personal,net,debug,web3 \\

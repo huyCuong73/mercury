@@ -7,7 +7,7 @@
 set -e
 
 # ------------- Cấu hình (giống node1.sh) -------------
-CHAINID="${CHAIN_ID:-mercury_9001-1}"
+CHAINID="${CHAIN_ID:-pblockchainlab_9001-1}"
 MONIKER="validator-2"
 KEYRING="test"
 KEYALGO="eth_secp256k1"
@@ -95,8 +95,8 @@ read -rp "Nhấn Enter khi Laptop A đã tiếp tục..."
 # ------------- Bước 7: Tạo gentx cho validator2 -------------
 echo ""
 echo "📝 Bước 4/7: Tạo gentx cho validator2..."
-mercuryd genesis gentx "$KEYNAME" 1000000000000000000000amercury \
-    --gas-prices ${BASEFEE}amercury \
+mercuryd genesis gentx "$KEYNAME" 1000000000000000000000aplab \
+    --gas-prices ${BASEFEE}aplab \
     --keyring-backend "$KEYRING" \
     --chain-id "$CHAINID" \
     --home "$CHAINDIR"
@@ -215,7 +215,7 @@ read -rp "Nhấn Enter để start node..."
 mercuryd start \
     --pruning nothing \
     --log_level info \
-    --minimum-gas-prices=0amercury \
+    --minimum-gas-prices=0aplab \
     --evm.min-tip=0 \
     --home "$CHAINDIR" \
     --json-rpc.api eth,txpool,personal,net,debug,web3 \

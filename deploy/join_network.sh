@@ -20,7 +20,7 @@ SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 source "$SCRIPT_DIR/network.conf" 2>/dev/null || true
 
 # ------------- Defaults from network.conf (if available) -------------
-CHAINID="${CHAIN_ID:-mercury_9001-1}"
+CHAINID="${CHAIN_ID:-pblockchainlab_9001-1}"
 KEYRING="${KEYRING:-test}"
 KEYALGO="${KEYALGO:-eth_secp256k1}"
 CHAINDIR="${CHAIN_HOME:-$HOME/.mercuryd}"
@@ -237,7 +237,7 @@ User=$USER
 ExecStart=$MERCURYD_PATH start \\
     --pruning nothing \\
     --log_level info \\
-    --minimum-gas-prices=0amercury \\
+    --minimum-gas-prices=0aplab \\
     --evm.min-tip=0 \\
     --home $CHAINDIR \\
     --json-rpc.api eth,txpool,personal,net,debug,web3 \\
@@ -296,7 +296,7 @@ echo "  To register as a VALIDATOR, you need to:"
 echo ""
 echo "  1. Receive tokens (ask an existing validator to send):"
 echo "     mercuryd tx bank send <FROM_KEY> $MY_ADDR \\"
-echo "       100000000000000000000000000amercury \\"
+echo "       100000000000000000000000000aplab \\"
 echo "       --keyring-backend $KEYRING --chain-id $CHAINID -y"
 echo ""
 echo "  2. Once you have tokens, run the registration command:"
@@ -310,7 +310,7 @@ cat <<REGEOF
 # === COPY AND RUN THIS COMMAND AFTER RECEIVING TOKENS ===
 
 mercuryd tx staking create-validator \\
-    --amount=1000000000000000000000amercury \\
+    --amount=1000000000000000000000aplab \\
     --pubkey='$PUBKEY' \\
     --moniker="$MONIKER" \\
     --commission-rate="0.10" \\
@@ -319,7 +319,7 @@ mercuryd tx staking create-validator \\
     --min-self-delegation="1" \\
     --gas=auto \\
     --gas-adjustment=1.5 \\
-    --gas-prices=${BASEFEE}amercury \\
+    --gas-prices=${BASEFEE}aplab \\
     --from=$KEYNAME \\
     --keyring-backend=$KEYRING \\
     --chain-id=$CHAINID \\
